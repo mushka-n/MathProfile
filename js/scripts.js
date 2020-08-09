@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
-	/*Модульное окно - база*/
+    /*
+	Модульное окно - база
 	$('.popup-button-baza').on('click', function(event) {
 		event.preventDefault();
 		$('.popup-baza').fadeIn();
@@ -26,7 +27,7 @@ $(document).ready(function(){
 
 
 
-	/*Модульное окно - профиль*/
+	Модульное окно - профиль
 	$('.popup-button-profil').on('click', function(event) {
 		event.preventDefault();
 		$('.popup-profil').fadeIn();
@@ -49,7 +50,9 @@ $(document).ready(function(){
 		$('.profil_'+id).fadeIn();
 		$('.popup-profil').animate({ scrollTop: 2000 }, 'slow');
 	});
+    */
 
+    
 
 
 	/*Скрипт для опросника по подсчету процентов*/
@@ -170,6 +173,6 @@ $(document).ready(function(){
             Darken_Page();
         }
 
-    });
 
+    });
 });

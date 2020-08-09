@@ -20,20 +20,12 @@ if (mysqli_num_rows($check_user)>0){
 		"id" => $id,
 		"email" => $user['email'],
 		"full_name" => $user['full_name'],
-		"quized" => $user['quized'],
-		"theme" => 'dark'
+		"result" => $user['result']
 	];
 
+	if ($result === NULL){
 
-	$check_user_quiz_baza = mysqli_query($connect, "SELECT * FROM `progress-baza`
-		WHERE `id` =  '$id' ");
-
-	$check_user_quiz_profil = mysqli_query($connect, "SELECT * FROM `progress-profil`
-		WHERE `id` = '$id' ");
-
-	if ((mysqli_num_rows($check_user_quiz_baza) + mysqli_num_rows($check_user_quiz_profil)) === 0){
-
-		header('Location: ../quiz/quiz-subject.php');
+		header('Location: ../quiz/quiz-profil.php');
 
 		} else {
 

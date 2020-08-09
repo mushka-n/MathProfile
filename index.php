@@ -15,7 +15,7 @@ if ($_SESSION['user']) {
     <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body style="background-color: #b6c0bb">
 
 <!-- Форма авторизации -->
     <div class="authentification">

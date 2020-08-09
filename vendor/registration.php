@@ -15,7 +15,7 @@
 
 
 </head>
-<body>
+<body style="background-color: #b6c0bb">
 
     <!-- Форма регистрации -->
     <div class="authentification registration">

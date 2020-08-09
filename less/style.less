@@ -1,18 +1,49 @@
 /* Цвета */
 
-@white: #ffffff;
-@black: #000000;
-@text-color: #212121;
+@light: #F2F0F0;
+@dark: #16131A;
+@grey: #212121;
+
 @profil-color: #473857;
 @baza-color: #149684;
-@transparent: rgba(0,0,0,0);
-@background: #171717;
 
-@quiz: #9367f7;
-@quiz-type-label: #5c5c5c;
 
-@msg:#ffa908;
-@msg-good: #1c8009;
+@blue:#06648D;
+@blue-light: #84A2B5;
+@green-light: #b6c0bb;
+
+@msg:#EB4F3C;
+@msg-good: #54C99B;
+
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+/* Шрифты */
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('../fonts/Helvetica_cyr.eot');
+    src: url('../fonts/Helvetica_cyr.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Helvetica_cyr.woff2') format('woff2'),
+        url('../fonts/Helvetica_cyr.woff') format('woff'),
+        url('../fonts/Helvetica_cyr.ttf') format('truetype'),
+        url('../fonts/Helvetica_cyr.svg#Helvetica_cyr') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.bold(){
+	font-family: 'Helvetica',sans-serif;
+	font-weight: 600;
+}
+
+.reg{
+	font-family: 'Helvetica',sans-serif;
+	font-weight: 300;
+}
 
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
@@ -23,11 +54,12 @@ html {
 	overflow: hidden;
 	font-size: 10px;
 	height: 100vh;
-	color:@white;
-	background-color:@background;
+	color:@dark;
+	background-color:@light;
 }
 
 body{
+	margin: 0;
 	.reg();
 	width: 100%;
     height: 100vh;
@@ -35,9 +67,8 @@ body{
     top: 0;
     left: 0;
 	overflow: auto;
-	font-family: "Open Sans";
-	color:@white;
-	background-color:@background;
+	color:@dark;
+	background-color:@light;
 }
 
 a, a.active.focus, a.active:focus, a.focus,a:active.focus,
@@ -53,20 +84,7 @@ button:active:focus,button:focus,{
 }
 
 
-/* ----------------------------------------------------------------------------------------
-----------------------------------------------------  */
 
-/* Шрифты */
-
-.bold(){
-	font-family: "Open Sans",sans-serif;
-	font-weight: 550;
-}
-
-.reg{
-	font-family: "Open Sans";
-	font-weight: 450;
-}
 
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
@@ -90,8 +108,8 @@ button:active:focus,button:focus,{
 	z-index: 1;
 	position: fixed;
 
-	color: @white;
-	background-color: @text-color;
+	color: @light;
+	background-color: @dark;
 	width: 100%;
 
 	transition: 0.4s ease-in-out;
@@ -99,10 +117,10 @@ button:active:focus,button:focus,{
 	&-block{
 		display: inline-block;
 		&-a{
-			color: @white;
+			color: @light;
 			transition: 0.4s ease-in-out;
 			&:hover{
-				color: @white;
+				color: @light;
 			}
 		}
 	}
@@ -166,7 +184,7 @@ button:active:focus,button:focus,{
 	padding-bottom: 4rem;
 	text-align: center;
 	h2{
-		color: @white;
+		color: @light;
 		font-size: 3rem;
 	}
 }
@@ -175,7 +193,7 @@ button:active:focus,button:focus,{
 .button{
 	.bold();
 	cursor: pointer;
-	color: @white;
+	color: @light;
 	text-transform: uppercase;
 	font-size: 2rem;
 	
@@ -184,8 +202,9 @@ button:active:focus,button:focus,{
 	width: 17.3rem;
 	margin: 1.5rem 2.5rem;
 	padding: 1.5rem 2rem;
-	background-color: @transparent;
-	border: 0.3rem solid @white;
+	background-color: transparent;
+	border: 0.3rem solid @light;
+	border-radius: 5px;
 
 	transition: 0.4s ease-in-out;
 	&:hover{
@@ -208,7 +227,7 @@ button:active:focus,button:focus,{
 		margin-top: 8rem;
 		}
 	display: none;
-	color:@white;
+	color:@light;
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -228,8 +247,8 @@ button:active:focus,button:focus,{
 		padding-bottom: 5rem;
 		&-icon{
 			position: absolute;
-			background-color:@transparent;
-			color: @white;
+			background-color:transparent;
+			color: @light;
 			font-size: 5rem;
 			border: 0;
 			&:hover{
@@ -242,23 +261,23 @@ button:active:focus,button:focus,{
 }
 
 
-
-
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
 
 /* Авторизация и регистрация */
 
 .authentification{
-	height: 38rem;
-	width: 45rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -19rem 0 0 -22.5rem;
-   // background-color: #fff;
-    padding: 5rem 0rem 5rem 0rem;
+	border-radius: 5px;
+	color: @light;
+	background-color: #212121;
+	display: block;
+	margin: 50rem auto;
+	width: 46rem;
+	height: 46rem;
+
+
 	form {
+		padding-top: 6rem;
 		margin: 0 auto;
 	    width: 40rem;
 	    .input-block{
@@ -270,6 +289,7 @@ button:active:focus,button:focus,{
 	    		display: inline-block;
 	    	}
 	    	input {
+	    		border-radius: 5px;
 	    		display: block;
 				margin: 1.3rem auto;
 	    		width: 70%;
@@ -284,30 +304,34 @@ button:active:focus,button:focus,{
 	    	padding: 2.3rem;
 	    }
 	    p {
-	    	color:#e3e3e3;
+	    	color:@light;
 	    	width: 100%;
 	    	text-align: center;
 	    	font-size: 2rem;
 	        margin: 2.3rem 0;
 	        a {
 	        	font-size: 2.6rem;
-	            color: @white;
+	            color: @light;
 	            font-weight: bold;
 	            text-decoration: underline;
 	        }
 	    }
 	}
 	.msg {
-	width: 75%;
+	height: 4rem;
+	border-radius: 5px;
+	width: 46rem;
 	display: block;
-	margin: 0 auto;
-    border: 2px solid @msg;
+	margin: 0 0 0 -3rem;
+	background-color: @grey;
+    //border: 2px solid @msg;
     border-radius: 3px;
-    padding: 1rem;
+    padding: 1rem 0 5rem;
     text-align: center;
     font-weight: bold;
+    color:  @msg;
     &-good{
-    	border-color: @msg-good;
+    	color: @msg-good;
     	}
 	}
 	.logout {
@@ -317,7 +341,7 @@ button:active:focus,button:focus,{
 
 .registration{
 	height: 60rem;
-	margin: -33rem 0 0 -22.5rem;
+	padding-bottom: 5rem;
 	button{
 		padding: 2rem;
 		width: auto;
@@ -330,24 +354,38 @@ button:active:focus,button:focus,{
 /* Вопросы для первоначальных настроек */
 
 .quiz{
+	background-color:@green-light;
+	.reg();
 	text-align: center;
-	height: 35rem;
-	width: 70%;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	display: block;
-	margin: 10rem auto;
-	padding: 7rem 10rem 7rem 10rem;
+	margin: 0 auto;
 	&-header{
-		margin-top: 10rem;
 		h1{
+			margin-bottom: 0;
+			padding-top: 30rem;
+			background-color:@green-light;
+			.bold();
 			text-align: center;
 		}
 	}
 	.section-header{
 		h2{
+			.bold();
+			padding-top: 10rem;
+			color: @dark;
 			margin: 0;
 			font-size: 2rem;
 		}
+	}
+
+	.second-part{
+		text-align: center;
+		position: absolute;
+		padding: 7rem 450% 0 450%;
+		width: 1000%;
+		margin-left: -450%;
+		background-color: @dark;
+		z-index: 1;
 	}
 
 
@@ -355,15 +393,38 @@ button:active:focus,button:focus,{
 		display: block;
 		height: auto;
 		margin-bottom: 10rem;
+
 		&-block{
+			z-index: 2;
+			box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.8);
+			padding: 1rem;
+			border-radius: 7px;
+			color: @light;
+			background-color:#212121;
 			text-align:  center;
-			display: inline-block;
-			width: 22.6rem;
-			height: auto;
+			display: inline-table;
+			width: 28rem;
+			min-height: 35rem;
 			margin: 1rem;
+			margin-bottom: 1.5rem;
+			&-wide{
+				width: 58rem;
+			}
+
+			
+
+			&-slider{
+				min-height:41rem; 
+				width: 35rem;
+				&-wide{
+					width: 72rem;
+				}
+			}
+		
+			
 
 			.task-number{
-				margin-left: -5rem;
+				margin-left: -6.7rem;
 				margin-bottom: 1rem;
 				text-align: center;
 				height: 2.5rem;
@@ -379,87 +440,142 @@ button:active:focus,button:focus,{
 
 			.wrap-task-name{
 				display: table;
-				padding-left: 1rem;
-				margin: 0.5rem 0 0.7rem;
+				width: 90%;
+				margin: 0.5rem auto;
 				.task-name{
-					border: 1px solid @quiz;
-					height: 3.5rem;
-					display: table-cell;
-					vertical-align: middle;
+					box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.22);
+					background-color: @blue-light;
+					color: @dark;
+					padding: 0.8rem;
+					border-radius:5px;
 					font-weight: 550;
 					text-align: center;
-					width: 20.6rem;
-					margin-left: 1rem;
-					font-size: 1.75rem;
+					width: 100%;
+					font-size: 1.7rem;
 					line-height: 2rem;
 				}
 			}
+
+			.collumn{
+				
+				display: inline-block;
+				vertical-align: middle;
+				&-first{
+					padding-right: 3rem;
+				}
+			}
+
 			&-type{
-				display: table;
-				margin: 0.5rem 0 0.5rem 0.5rem;
+				padding: 0.4rem;
+				margin: 0.5rem 0rem 0.5rem 1.5rem;
 				
 				.name{
-					text-align: right;
+					text-align: left;
 					line-height: 2rem;
 					display: table-cell;
-					width: 13rem;
-					font-size: 1.75rem;
+					width: 18.5rem;
+					font-size: 1.8rem;
+					//font-stretch: semi-condensed;
 
 				}
 
 				.wrap{
-					padding-left: 2rem;
+					padding-left: 2.5rem;
 					display: table-cell;	
 					vertical-align: middle;
 					label{
-						box-shadow: 0 0 10px rgba(0,0,0,0.5);
+						/* box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.22);
 						margin-left: 2rem;
 						display: table-cell;
-						vertical-align: middle;
+						vertical-align: bottom;
 						height: 1.6rem;
 						width: 1.6rem;
-						background-color:@text-color;
+						background-color:@blue-light;
 						line-height: 15px;
 						text-align: center;
 						font-size: 1.3rem;
-						color: @quiz;
+						color: @dark; */
 						
 					}
 					.score{
 						&-checkbox{
-							display: none;
-							&:checked + label:before {
-								content: "\2713";
-								text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-								}
+							position: absolute;
+							z-index: -1;
+							opacity: 0;
+							&+label {
+							    display: inline-flex;
+							    align-items: center;
+							    user-select: none;
+							    }
+							+label::before {
+							    content: '';
+							    display: inline-block;
+							    width: 2rem;
+							    height: 2rem;
+							    flex-shrink: 0;
+							    flex-grow: 0;
+							    border: 3px solid @blue-light;
+							    border-radius: 0.25em;
+							    background-repeat: no-repeat;
+							    background-position: center center;
+							    background-size: 50% 50%;
+							    }
+
+							&:not(:disabled):not(:checked)+label:hover::before {
+							      border-color: @light;
+							    }
+
+							&:not(:disabled):active+label::before {
+							      background-color: @blue-light;
+							      border-color: @blue-light;
+							    }
+							&:focus+label::before {
+							      box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
+							    }
+
+							&:focus:not(:checked)+label::before {
+							      border-color: @blue-light;
+							    }
+
+							&:checked+label::before {
+							      border-color: @blue-light;
+							      background-color:@blue-light;
+							      content:'\2714';
+							      color: @light;
+							      line-height: 1.7rem;
+							      font-size: 1.7rem;
 							}
+						}
+
 						&-slider{
 							-webkit-appearance: none;
 							border-radius:2px;
 							height: 5px;
 							outline : none;
-							background-color: @text-color;
+							background-color: @dark;
 							&::-webkit-slider-thumb{
+
     							-webkit-appearance: none;
     							width:0px;
    								height:0px;
-    							border-top: 8px solid @quiz;
-    							border-left: 5px solid @quiz;
-    							border-right: 5px solid @quiz;
+    							border-top: 12px solid @blue-light;
+    							border-left: 7.5px solid @blue-light;
+    							border-right: 7.5px solid @blue-light;
     							border-radius:18px;
     							cursor:pointer;
    								transition:.1s;
    								&:hover, &:active{
-									border-left: 5px solid transparent;
-									border-right: 5px solid transparent;
-									border-radius:18px;
+									border-left: 7.5px solid transparent;
+									border-right: 7.5px solid transparent;
+									border-radius:6px;
    								} 
 							}
 							width: 10rem;
 							cursor: pointer;
 							&-points{
-								width: 9.6rem;
-								margin-left: 0.2rem;
+								margin-top: 3px;
+								width: 9.5rem;
+								margin-left: 0.3rem;
 								height: 8.4px;
 								.point{
 									display: inline-block;
@@ -469,7 +585,7 @@ button:active:focus,button:focus,{
 
 								&-two{
 									.point{
-										margin-right: 39.1%;
+										margin-right: 39%;
 										&-last{
 											margin: 0;
 										}
@@ -514,7 +630,7 @@ button:active:focus,button:focus,{
 
 /* Профиль */
 .profile{
-	background:@text-color url(../imgs/backgrounds/profile.jpg) center center no-repeat;
+	background:@dark url(../imgs/backgrounds/profile.jpg) center center no-repeat;
 	background-size: cover;
 	height: 100%;
 	transition: 0.4s ease-in-out;
@@ -571,7 +687,7 @@ button:active:focus,button:focus,{
 
 .progress{
 	height: 100%;
-	background-color:@background;
+	background-color:@light;
 	.section-header{
 		h2{
 			display: block;
@@ -601,7 +717,7 @@ button:active:focus,button:focus,{
 
 /* Шаблон теория */
 .theory{
-	color:@white;
+	color:@light;
 	background-color:rgba(0,0,0,0.7);
 	padding-bottom: 100rem;
 
@@ -622,7 +738,7 @@ button:active:focus,button:focus,{
 			margin: 1rem 0;
 			display: inline-block;
 			padding: 2rem;
-			border: 2px solid @text-color;
+			border: 2px solid @dark;
 		}
 	}
 }
@@ -664,13 +780,13 @@ button:active:focus,button:focus,{
 .white-themed{
 
 	&-menu{
-		color: @text-color;
+		color: @dark;
 		background-color: #dcdcde;
 
 		&-block-a{
-			color: @text-color;
+			color: @dark;
 			&:hover{
-				color: @text-color;
+				color: @dark;
 			}
 		}
 
@@ -686,15 +802,15 @@ button:active:focus,button:focus,{
 	}
 
 	&-profile{
-		background:@white url(../imgs/backgrounds/profile_white.jpg) center center no-repeat;
+		background:@light url(../imgs/backgrounds/profile_white.jpg) center center no-repeat;
 		background-size: cover;
 	}
 	&-button{
-		background-color: rgba(255,255,255,0.5);
-		border-color: @text-color;
-		color: @text-color;
+		//background-color: rgba(255,255,255,0.5);
+		border-color: @dark;
+		color: @dark;
 		&:hover{
-			color: @white;
+			color: @light;
 		}
 	}
 }
@@ -706,12 +822,12 @@ button:active:focus,button:focus,{
 
 /* Титульник */
 /* .header{
-	color:@white;
+	color:@light;
 	text-align: center;
 	
 	width: 100%;
 	height: 100vh;
-	background: @white url(../imgs/backgrounds/profile.jpg) center center no-repeat;
+	background: @light url(../imgs/backgrounds/profile.jpg) center center no-repeat;
 	background-size: cover;
 	padding: 14rem 0 5rem 0;
 	h1{
@@ -753,7 +869,7 @@ button:active:focus,button:focus,{
 			border: 0.3rem solid @baza-color;
 			transition: none !important;
 			&:hover{
-				border: 0.3rem solid @white;
+				border: 0.3rem solid @light;
 				background-color:@baza-color;
 			}
 		}
@@ -769,7 +885,7 @@ button:active:focus,button:focus,{
 			border: 0.3rem solid @profil-color;
 			transition: none !important;
 			&:hover{
-				border: 0.3rem solid @white;
+				border: 0.3rem solid @light;
 				background-color:@profil-color;
 			}
 		}
@@ -785,7 +901,7 @@ button:active:focus,button:focus,{
 			.bold();
 			padding-bottom: 0.5rem;
 			a{
-				color:@white;
+				color:@light;
 			}
 		}
 		font-size: 2.5rem;
@@ -798,7 +914,7 @@ button:active:focus,button:focus,{
 					text-decoration: underline;
 				}
 				a{
-					color: @white;
+					color: @light;
 				}
 			}
 		}
