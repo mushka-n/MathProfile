@@ -20,22 +20,17 @@ if (mysqli_num_rows($check_user)>0){
 		"id" => $id,
 		"email" => $user['email'],
 		"full_name" => $user['full_name'],
-		"result" => $user['result']
 	];
 
-	if ($result === NULL){
-
+	if ($user['result'] == NULL){
 		header('Location: ../quiz/quiz-profil.php');
-
-		} else {
-
-	header('Location: ../profile/profile.php');
-
+	} else {
+		header('Location: ../index.php');
 	}
 
 } else {
 	$_SESSION['message'] = 'Неверный логин или пароль';
-    header('Location: ../index.php');
+    header('Location: authorisation.php');
 }
 
 ?>

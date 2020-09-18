@@ -1,0 +1,335 @@
+/* Цвета */
+
+@light: #EBECE6;
+@dark: #16131A;
+@grey: #212121;
+
+
+@blue:#06648D;
+@blue-light: #84A2B5;
+
+@green-light: #b6c0bb;
+
+@purple-dark: #24232E;
+@purple: #473857;
+@purple-light:#838194;
+
+@beighe: #E2E2BC;
+
+@red-func:#EB4F3C;
+@yellow-func: #EBA63C;
+@green-func: #54C99B;
+
+
+@green: #1e743d;
+@primary: #11998e;
+@secondary: #38ef7d;
+@gray: #9b9b9b;
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
+html {
+	color:@dark;
+	background-color:@light;
+}
+
+body{
+	color:@dark;
+	background-color:#D8DDDA;
+}
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+/* Меню */ 
+
+#theme-switch{
+	cursor: pointer;
+	filter: none;
+	background: url(../imgs/icons/theme_dark.png) center center no-repeat;
+	background-size: contain;
+}
+
+.menu{
+	color: @dark;
+	background-color: @green-light;
+	
+	&-block{
+
+		&-a{
+			color: @dark;
+			&:hover{
+				color: @dark;
+			}
+		}
+	}
+}
+
+.button{
+	background-color: @purple;
+	color: @light;
+	box-shadow: 0 8px 15px rgba(0,0,0,.1);
+	&:hover {
+  		//background: @dark;
+ 		box-shadow: 0 15px 20px rgba(22,19,26,.6);
+
+  		color: @light;
+	}
+}
+
+/* Заголовок секции */
+.section-header{
+	h2{
+		color: @dark;
+	}
+}
+
+/* Модальное окно */
+.popup{
+	color:@light;
+	&-close{
+		&-icon{
+			color: @light;
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
+.authentification{
+	color: @light;
+	background-color: @grey;
+	form {
+	    p {
+	    	color:@light;
+	        a {
+	            color: @light;
+	        }
+	    }
+	}
+	.msg {
+	background-color: @grey;
+    color:  @red-func;
+    &-good{
+    	color: @green-func;
+    	}
+	}
+	.logout {
+	    color: #b7625c;
+	}
+}
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
+.quiz{
+	background-color:@green-light;
+	&-header{
+		h1{
+			background-color:@green-light;
+		}
+	}
+	.section-header{
+		h2{
+			color: @dark;
+		}
+	}
+
+	.second-part{
+		background-color: @dark;
+	}
+
+	.pass{
+		border-color: @dark;
+		color: @dark;
+		&:hover{
+			color: @light;
+			border-color: @purple;
+		}
+	}
+
+
+	&-progress{
+		&-block{
+			box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.8);
+			color: @light;
+
+			.wrap-task-name{
+				.task-name{
+					box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.22);
+					background-color: @blue-light;
+					color: @dark;
+				}
+			}
+
+			&-type{
+				.wrap{
+					.score{
+						&-checkbox{
+							+label::before {
+							    border: 3px solid @blue-light;
+							    }
+
+							&:not(:disabled):not(:checked)+label:hover::before {
+							      border-color: @light;
+							    }
+							&:not(:disabled):active+label::before {
+							      background-color: @blue-light;
+							      border-color: @blue-light;
+							    }
+							&:focus+label::before {
+							      box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
+							    }
+							&:focus:not(:checked)+label::before {
+							      border-color: @blue-light;
+							    }
+
+							&:checked+label::before {
+							      border-color: @blue-light;
+							      background-color:@blue-light;
+							      color: @light;
+							}
+						}
+						&-slider{
+							background-color: @dark;
+							&::-webkit-slider-thumb{
+    							border-top: 12px solid @blue-light;
+    							border-left: 7.5px solid @blue-light;
+    							border-right: 7.5px solid @blue-light;
+   								&:hover, &:active{
+   								} 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
+.profile{
+	background:@light url(../imgs/backgrounds/profile_white.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+
+.progress{
+	color: @dark;
+	&-block{
+		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.22);
+		.wrap-task-name{
+
+			.task-name{
+				background-color: @beighe;
+				box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.22);
+			}
+		}
+		&-red{
+			background-color: #EC5745;
+		}
+		&-yellow{
+			background-color: #ECAA44;
+		}
+		&-green{
+			background-color: #63CEA4;
+		}
+	}
+}
+
+
+.theory{
+	&-block{
+		background-color: @blue-light;
+		&:hover {
+		  box-shadow:
+		    0px 3.5px @blue;
+		}
+		&-name{
+			color: @dark;
+		}
+	}
+}
+
+
+.tests{
+	&-block{
+		border: 3px solid @dark;
+		//background-color: @grey;
+		&-header{
+
+			h3{
+				//color:@light;
+			}
+		}
+	}
+}
+
+
+.personal-test{
+	
+	&-block{
+		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.8);
+		background-color: @purple-light;
+		color: @light;
+		border: 0px solid @dark;
+		
+		&:hover{
+			box-shadow:  0 10px 15px 2px rgba(0,0,0,0.8);
+		}
+	}
+
+	.second-part{
+		background-color: @purple;
+	}
+
+	.huge{
+		.huge {
+		    &-block{
+		        .huge-answer{
+
+		            border-bottom: 2px solid @dark;
+		            color: @dark;
+		            background: transparent;
+
+		            &::placeholder {
+		                color: transparent;
+		            }
+		    	
+		        }
+
+		     	label {
+		        	color: @dark;
+		        }
+
+		        .huge-answer:focus {
+		        	border-bottom: 2px solid @purple;
+		        	//border-image: linear-gradient(to right, @dark,@purple);
+
+		        	~ label {
+		            	color: @purple;    
+		            }
+		        }
+		    }
+		}
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -44,7 +44,7 @@ if ($password !== $password_confirm){
 	$_SESSION['message-good'] = 'Регистрация прошла успешно!';
 
 	/*Возвращение к индексной странице*/
-	header('Location: ../index.php');
+	header('Location: authorisation.php');
 }
 
 ?>

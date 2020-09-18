@@ -1,12 +1,29 @@
 <?php
+
+// чтобы нельзя было попасть по  ссылке
+
 session_start();
+if (!$_SESSION['user']) {
+    header('../index.php');
+}
+
+include_once '../vendor/connect.php';
+$user = mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `users`  WHERE `id` = '$id'"));
+if ($user['result'] != ''){
+    header('Location: ../index.php');
+}
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MLS-exams</title>
+    <title>Math Profile</title>
 
     <!--Bootsrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -45,7 +62,21 @@ session_start();
             <div class="col-12">
                 <form action="quiz-profil-results.php" method="POST">
 
-                    <button class="button white-themed-button" style="margin-bottom: 30rem;" type="submit">Пропустить тестирование</button>
+                    <button class="button" type="submit">Пропустить тестирование</button>
+
+
+                    <div data-v-3699c9a0="" data-v-4d5efaa8="" class="scrolldown">
+                        <svg data-v-3699c9a0="" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28.5px" height="43.5px" viewBox="0 0 28.5 43.5" enable-background="new 0 0 28.5 43.5" xml:space="preserve">
+                            <g data-v-3699c9a0="">
+                                <path data-v-3699c9a0="" fill="none" stroke="#16131a" stroke-width="3" d="M14.415,41.848L14.415,41.848C7.587,41.848,2,36.261,2,29.433V14.415 C2,7.587,7.587,2,14.415,2h0c6.828,0,12.415,5.587,12.415,12.415v15.019C26.829,36.261,21.243,41.848,14.415,41.848z"></path>
+                                <line data-v-3699c9a0="" id="dropdown-point" x1="14.415" y1="12.408" x2="14.415" y2="12.408" stroke="#16131a" stroke-width="5" stroke-linecap="round">
+                                    <animate data-v-3699c9a0="" id="animation1" attributeName="y2" dur="3s" values="12.408; 12.408; 12.408; 15.908; 19.408; 19.408; 23.408; 23.408; 23.408; 23.408; 23.408" repeatCount="indefinite" begin="0s" fill="freeze"></animate>
+                                    <animate data-v-3699c9a0="" id="animation2" attributeName="y1" dur="3s" values="12.408; 12.408; 12.408; 12.408; 12.408; 12.408; 23.408; 23.408; 23.408; 23.408; 23.408" repeatCount="indefinite" begin="0s" fill="freeze"></animate>
+                                    <animate data-v-3699c9a0="" id="animation3" attributeName="opacity" dur="3s" values="0; 1; 1; 1; 1; 1; 1; 1; 1; 0; 0;" repeatCount="indefinite" begin="0s" fill="freeze"></animate>
+                                </line>
+                            </g>
+                        </svg>
+                    </div>
 
                     <!-- 
                     .quiz-progress-block>p.task-number{Задание !:}>span.value[id="!"]{0%}^+.wrap-task-name>p.task-name^+.quiz-progress-block-type*N>p.name+.wrap>input.score.score-checkbox[type="checkbox" value="0" id="!.$.?" name="t!_$"]+label[for="!.$.?"]
@@ -823,7 +854,7 @@ session_start();
                             <p class="name">Вклады и кредиты</p>
                             <div class="wrap">
 
-                                <input  class="score score-slider" type="range" min="0" max="3" step="1" value="0" alt="0" id="17.1.80" name="t17_1">
+                                <input  class="score score-slider" type="range" min="0" max="3" step="1" value="0" alt="0" id="17.1.70" name="t17_1">
 
                                 <div class="score-slider-points score-slider-points-three">
                                     <span class="point point-first">0</span>
@@ -838,7 +869,7 @@ session_start();
                         <div class="quiz-progress-block-type">
                             <p class="name">Оптимизация</p>
                             <div class="wrap">
-                                <input  class="score score-slider" type="range" min="0" max="3" step="1" value="0" alt="0" id="17.2.20" name="t17_2">
+                                <input  class="score score-slider" type="range" min="0" max="3" step="1" value="0" alt="0" id="17.2.30" name="t17_2">
                                 <div class="score-slider-points score-slider-points-three">
                                     <span class="point point-first">0</span>
                                     <span class="point point-middle">1</span>
@@ -1085,7 +1116,25 @@ session_start();
     </div>
 </div>
 
-<div class="second-part"></div>
+
+<script type="text/javascript">
+    $('.wrap-task-name').click(function(event)
+    {
+        $(this).parent().find('input[type="checkbox"]').trigger('click');
+        
+
+        var range = $(this).parent().find('input[type="range"]');
+        let range_val = range.val();
+
+        if (range_val == range.attr('max')){
+            range.val(0);
+        } else{
+            range.val(parseInt(range_val)+1);
+        }
+        
+        range.trigger('click');
+    });
+</script>
 
 </body>
 </html>

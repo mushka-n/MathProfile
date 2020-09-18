@@ -120,59 +120,46 @@ $(document).ready(function(){
    
 
     /*Смена тем*/
-    $('.theme-switch').on('click',function(event) {
+    var btn = document.getElementById("theme-switch");
+    var link = document.getElementById("theme-link");
 
-        function Whiten_Page() {
+    btn.addEventListener("click", function () { ChangeTheme(); });
 
-            $(document.getElementById('menu')).addClass("white-themed-menu");
-            $(document.getElementById('menu-logo')).addClass("white-themed-menu-logo");
-            let as = (document.getElementsByClassName('menu-block-a'));
-            for (let i = 0; i < as.length; i++)$(as[i]).addClass("white-themed-menu-block-a");
-            $(document.getElementById('theme-switch')).addClass("white-themed-switch");           
+    function Save(theme)
+    {
+        var Request = new XMLHttpRequest();
+        Request.open("GET", "/vendor/themes.php?theme=" + theme, true); //У вас путь может отличаться
+        Request.send();
+    }
 
-            $(document.getElementById('profile')).addClass("white-themed-profile");
+    function ChangeTheme()
+    {
+        let lightTheme = "../css/light.css";
+        let darkTheme = "../css/dark.css";
 
-            let buttons = (document.getElementsByClassName('button'));
-            for (let i = 0; i < buttons.length; i++){
-                $(buttons[i]).addClass("white-themed-button");
-            }
+        var currTheme = link.getAttribute("href");
+        var theme = "";
+
+        if(currTheme == lightTheme)
+        {
+         currTheme = darkTheme;
+         theme = "dark";
+        }
+        else
+        {    
+         currTheme = lightTheme;
+         theme = "light";
         }
 
-        function Darken_Page(){
+        link.setAttribute("href", currTheme);
 
-            $(document.getElementById('theme-switch')).removeClass("white-themed-switch");
-
-            let as = (document.getElementsByClassName('menu-block-a'));
-
-            for (let i = 0; i < as.length; i++){
-                $(as[i]).removeClass("white-themed-menu-block-a");
-            }
-
-            $(document.getElementById('menu')).removeClass("white-themed-menu");
-
-            $(document.getElementById('menu-logo')).removeClass("white-themed-menu-logo");
-
-            $(document.getElementById('profile')).removeClass("white-themed-profile");
-
-            let buttons = (document.getElementsByClassName('button'));
-
-            for (let i = 0; i < buttons.length; i++){
-                $(buttons[i]).removeClass("white-themed-button");
-            }
-        }
-
-        var white_switch = $(this).hasClass('white-themed-switch')
-
-        if (!white_switch){
-
-            Whiten_Page();
-        }
-
-        else if (white_switch){
-
-            Darken_Page();
-        }
+        Save(theme);
+    }
 
 
-    });
+
+        
+        
+
+
 });

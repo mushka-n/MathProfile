@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MLS-exams</title>
+    <title>Math Profile</title>
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
 
