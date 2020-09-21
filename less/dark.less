@@ -12,7 +12,7 @@
 
 @purple-dark: #24232E;
 @purple: #473857;
-@purple-light:#838194;
+@purple-light:#676C7D;
 
 @beighe: #E2E2BC;
 
@@ -224,9 +224,14 @@ body{
 	background-size: cover;
 }
 
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
 .progress{
-	color: @dark;
+	
 	&-block{
+		color: @dark;
 		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.22);
 		.wrap-task-name{
 			.task-name{
@@ -246,36 +251,81 @@ body{
 	}
 }
 
-.theory{
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+.choose-theory{
 	&-block{
-		background-color: @purple;
-		&:hover {
-		  box-shadow:
-		    0px 3.5px @purple-light;
+
+		&:hover{
+			box-shadow:  0px 6px 0px #605661, 0px -3px 8px rgba(22,16,26,0.8);
 		}
-		&-name{
-			color: @light;
+	}
+
+	&-header{
+
+		background-color: #7B6F7D;
+		color: @light;
+	}
+}
+
+.theory{
+	&-header{
+
+		&-semi{
+		}
+		&-main{
+			border-bottom: 5px solid @light;
+		}
+	}
+
+	ul{
+		li{
+			&::before{
+				color: @purple-light;
+			}
+		}
+	}
+
+	.example{
+		border: 4px solid @purple-light;
+		&-text{
+		}
+		&-solution{
+			&-header{
+			}
+		}
+		&-answer{
 		}
 	}
 }
 
-.tests{
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
+.choose-test{
+
 	&-block{
-		border: 3px solid @light;
-		&-header{
-			h3{
-				.info-good{
-					color: @green-func;
-				}
-			}
+		background-color: #7B6F7D;
+	}
+
+	&-header{
+		border-bottom: 7px solid @purple-dark;
+	}
+
+	&-recom{
+		&-green{
+			color: @green-func;
 		}
 	}
-}
+} 
 
 .personal-test{
 	
 	&-block{
-		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.8);
+		box-shadow: 0 4px 20px -12px rgba(0, 0, 0, 0.8);
 		background-color: @purple-light;
 		color: @light;
 		border: 0px solid @dark;
@@ -318,6 +368,11 @@ body{
 	    }
 	}
 }
+
+.inactive{
+	background-color: @grey !important;
+}
+
 
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */

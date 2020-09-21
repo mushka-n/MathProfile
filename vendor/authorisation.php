@@ -11,7 +11,7 @@ if ($_SESSION['user']) {
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Math Profile</title>
+    <title>MathProfile</title>
     <link rel="stylesheet" href="../css/style.css">
 
 </head>

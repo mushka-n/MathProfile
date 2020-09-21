@@ -74,7 +74,7 @@
  <html lang="en">
  <head>
      <meta charset="UTF-8">
-     <title>Math Profile</title>
+     <title>MathProfile</title>
 
      <!-- Favicon -->
      <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
@@ -119,7 +119,7 @@
      <div class="personal-test results">
          <div class="contaner">
             <div class="results-header">
-                Вы можете отметить сами то кол-во баллов, на которое получили за выполнение второй части.<br>
+                Вы можете отметить сами то кол-во баллов, которое получили за выполнение второй части.<br>
                 <p class="flag-header">Для того, чтобы задания части "B" части не учитывались, не забудьте отметить флажок рядом с кнопкой "Завершить тестирование"</p>
             </div>
              <div class="personal-test-tasks">

@@ -62,10 +62,10 @@ body {
 }
 .authentification .msg {
   background-color: #212121;
-  color: #eb4f3c;
+  color: #ec5745;
 }
 .authentification .msg-good {
-  color: #54c99b;
+  color: #63cea4;
 }
 .authentification .logout {
   color: #b7625c;
@@ -136,6 +136,8 @@ body {
   background: #ebece6 url(../imgs/backgrounds/profile_white.jpg) center center no-repeat;
   background-size: cover;
 }
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
 .progress {
   color: #16131a;
 }
@@ -155,28 +157,45 @@ body {
 .progress-block-green {
   background-color: #63CEA4;
 }
-.theory-block {
-  background-color: #84a2b5;
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+.choose-theory-block:hover {
+  box-shadow: 0px 6px 0px #507085, 0px -3px 5px rgba(22, 16, 26, 0.3);
 }
-.theory-block:hover {
-  box-shadow: 0px 3.5px #06648d;
+.choose-theory-header {
+  background-color: #84A2B5;
 }
-.theory-block-name {
-  color: #16131a;
+.theory-header-main {
+  border-bottom: 5px solid #16131a;
 }
-.tests-block {
-  border: 3px solid #16131a;
+.theory ul li::before {
+  color: #bdbfc9;
+}
+.theory .example {
+  border: 4px solid #bdbfc9;
+}
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+.choose-test-block {
+  background-color: #84A2B5;
+}
+.choose-test-header {
+  border-bottom: 7px solid #d8ddda;
+}
+.choose-test-recom-green {
+  color: #1F6449;
 }
 .personal-test-block {
-  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.8);
-  background-color: #838194;
-  color: #ebece6;
+  box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.4);
+  background-color: #bdbfc9;
+  color: #16131a;
   border: 0px solid #16131a;
 }
 .personal-test-block:hover {
-  box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
 .personal-test .second-part {
+  color: #ebece6;
   background-color: #473857;
 }
 .personal-test .huge .huge-block .huge-answer {
@@ -195,4 +214,7 @@ body {
 }
 .personal-test .huge .huge-block .huge-answer:focus ~ label {
   color: #473857;
+}
+.inactive {
+  background-color: #212121 !important;
 }

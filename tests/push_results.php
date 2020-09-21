@@ -16,7 +16,10 @@ if (!$_SESSION['user']) {
 $result;
 $pr_fins=[];
 
-for ($i=1; $i<20; $i++){
+if ($_POST['flag']) $n = 13;
+else 				$n = 20;
+
+for ($i=1; $i<$n; $i++){
 
 	// определяем сложность задания
 	$task_diff = (int)($_POST['diffs'][$i-1])-1;
@@ -54,7 +57,7 @@ for ($i=1; $i<20; $i++){
 	}
 
 	//вносим в массив для дальнейших вычислений
-	$pr_fins[$i] = $task_pr_fin;
+	$pr_fins[$i] = round($task_pr_fin);
 
 	// вносим в базу
 	mysqli_query($connect, "  UPDATE  `$i` 
@@ -63,8 +66,17 @@ for ($i=1; $i<20; $i++){
 							  WHERE   `id`= '$id'"				);
 }
 
+if ($n == 13){
+	for ($i=13; $i<20; $i++){
+		$task_wh =  mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `$i`  WHERE `id` = '$id'"));
+		$pr_fins[$i] = (int)($task_wh[$i]);
+	}
+}
+
+
+
 	// считаем общий прогресс ученика и вносим в базу
-	for ($i=1;  $i<=12; $i++)  $result+= $pr_fins[$i];
+	for ($i=1;  $i<=12; $i++) $result+= $pr_fins[$i];
 	for ($i=13; $i<=15; $i++) $result+= $pr_fins[$i]*2;
 	for ($i=16; $i<=17; $i++) $result+= $pr_fins[$i]*3;
 	for ($i=18; $i<=19; $i++) $result+= $pr_fins[$i]*4;

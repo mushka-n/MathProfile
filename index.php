@@ -17,7 +17,7 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math Profile</title>
+    <title>MathProfile</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
@@ -48,7 +48,7 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
 
             <div class="row">
 
-                <span class="menu-logo menu-block"><a href="profile.php" class="menu-block-a"><img src="../imgs/icons/favicon.png" alt="" id="menu-logo"><span>Math<br>Profile</span></a></span>
+                <span class="menu-logo menu-block"><a href="" class="menu-block-a"><img src="../imgs/icons/favicon.png" alt="" id="menu-logo"><span>Math<br>Profile</span></a></span>
 
                 <span class="menu-user menu-block" ><?= $_SESSION['user']['full_name'] ?></span>
 
@@ -75,11 +75,11 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
                             </form>
                         </div>
                         <div class="options-functional">
-                            <form action="">
-                                <button class="button" type="submit">теория и практика</button>
+                            <form action="theory/theory.php">
+                                <button class="button" type="submit">теория</button>
                             </form>
-                            <form action="tests/pr_test.php">
-                                <button class="button" type="submit" >составить тест</button>
+                            <form action="tests/choose_test.php">
+                                <button class="button" type="submit" >составить вариант</button>
                             </form>
                             <form action="">
                                 <button class="button" id="button" type="submit">печатные материалы</button>

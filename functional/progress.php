@@ -38,7 +38,23 @@ $pr17 = mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `17` WHERE `id` 
 $pr18 = mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `18` WHERE `id` = '$id'"));
 $pr19 = mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `19` WHERE `id` = '$id'"));
 
+$result = round(((int)$user['result'])*32/100);
 
+if     ($result ==  1 ) $result = 5;
+elseif ($result ==  2 ) $result = 9;
+elseif ($result ==  3 ) $result = 14;
+elseif ($result ==  4 ) $result = 18;
+elseif ($result ==  5 ) $result = 23;
+elseif ($result ==  6 ) $result = 27;
+elseif ($result ==  7 ) $result = 33;
+elseif ($result ==  8 ) $result = 39;
+elseif ($result ==  9 ) $result = 45;
+elseif ($result ==  10 ) $result = 50;
+elseif ($result ==  11 ) $result = 56;
+elseif ($result ==  12 ) $result = 62;
+elseif ($result > 12 AND $result < 29) $result = ($result-13)*2 + 68;
+elseif ($result ==  29 ) $result = 99;
+elseif ($result > 29 ) $result = 100;
 
 ?>
 
@@ -46,7 +62,7 @@ $pr19 = mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `19` WHERE `id` 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math Profile</title>
+    <title>MathProfile</title>
 
     <!--Bootsrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -92,14 +108,17 @@ $pr19 = mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `19` WHERE `id` 
         <div class="container">
            
                 
-                <div class="final-progress">
-                    <p class="final-progress-header">Ваш ожидаемый балл:</p>
-                    <p class="final-progress-data"><?php echo $user['result'] ?></p>
+                <div class="final">
+                    <div class="final-progress">
+                        <p class="final-progress-header">Вы готовы к<br>экзамену на</p>
+                        <p class="final-progress-data" id="fpercent" ><?php echo $user['result'] ?>%</p>
+                    </div>
+                    <div class="split" id="split"></div>
+                    <div class="final-progress">
+                        <p class="final-progress-header">Ваш ожидаемый<br>балл:</p>
+                        <p class="final-progress-data" id="fpoints"><?php echo $result ?></p>
+                    </div>
                 </div>
-            
-      
-
-
 
 
                 <div class="progress-block" id="1">
@@ -663,6 +682,22 @@ $pr19 = mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `19` WHERE `id` 
     </div>
 
 
+<script>
+    var fpr_points  = parseInt(document.getElementById('fpoints').textContent);
+    var fpr_percent = parseInt((document.getElementById('fpercent').textContent).slice(0,-1));
+    //alert(fpr_points+' '+fpr_percent);
+
+    if      (fpr_points <= 30)                    {$('#fpoints').css("border","5px solid #EB4F3C"); $('#split').css("background-color","#EB4F3C")}
+    else if (fpr_points>30 && fpr_points<80)      {$('#fpoints').css("border","5px solid #EBA63C"); $('#split').css("background-color","#EBA63C")}
+    else                                          {$('#fpoints').css("border","5px solid #54C99B"); $('#split').css("background-color","#54C99B")}
+
+
+    if      (fpr_percent <= 27)                   $('#fpercent').css("border","5px solid #EB4F3C")
+    else if (fpr_percent>27 && fpr_percent<80)    $('#fpercent').css("border","5px solid #EBA63C")
+    else                                          $('#fpercent').css("border","5px solid #54C99B")
+
+
+</script>
 
 <script>
     

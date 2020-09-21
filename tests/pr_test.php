@@ -74,7 +74,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Math Profile</title>
+    <title>MathProfile</title>
 
     <!-- Favicon -->
     <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
@@ -225,7 +225,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <button class="button" type="submit" id="finish_test_2" disabled="true">Завершить тестирование</button>
+                                    <button class="button" type="submit" id="finish_test_2" disabled="true">Сдать вариант</button>
                                 </div>
                             </div>
                         </div>
@@ -233,7 +233,7 @@
                     
                 </form>
 
-                <button class="button" id="finish_test">Завершить тестирование</button>
+                <button class="button" id="finish_test">Сдать вариант</button>
 
             </div>
         </div>
@@ -358,6 +358,7 @@
 
             $('.huge-task').attr('src',path);
             $('.huge-task').css('border','10px solid #fff');
+            $('.huge-task').css('display','block');
             $('.huge').css('display','block');
             $('#huge_block_' + task_num).css('display','block');
         });

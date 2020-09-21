@@ -139,10 +139,10 @@ body {
   background: #16131a url(../imgs/backgrounds/profile.jpg) center center no-repeat;
   background-size: cover;
 }
-.progress {
-  color: #16131a;
-}
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
 .progress-block {
+  color: #16131a;
   box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.22);
 }
 .progress-block .wrap-task-name .task-name {
@@ -158,24 +158,38 @@ body {
 .progress-block-green {
   background-color: #54c99b;
 }
-.theory-block {
-  background-color: #473857;
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+.choose-theory-block:hover {
+  box-shadow: 0px 6px 0px #605661, 0px -3px 8px rgba(22, 16, 26, 0.8);
 }
-.theory-block:hover {
-  box-shadow: 0px 3.5px #838194;
-}
-.theory-block-name {
+.choose-theory-header {
+  background-color: #7B6F7D;
   color: #ebece6;
 }
-.tests-block {
-  border: 3px solid #ebece6;
+.theory-header-main {
+  border-bottom: 5px solid #ebece6;
 }
-.tests-block-header h3 .info-good {
+.theory ul li::before {
+  color: #676c7d;
+}
+.theory .example {
+  border: 4px solid #676c7d;
+}
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+.choose-test-block {
+  background-color: #7B6F7D;
+}
+.choose-test-header {
+  border-bottom: 7px solid #24232e;
+}
+.choose-test-recom-green {
   color: #54c99b;
 }
 .personal-test-block {
-  box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.8);
-  background-color: #838194;
+  box-shadow: 0 4px 20px -12px rgba(0, 0, 0, 0.8);
+  background-color: #676c7d;
   color: #ebece6;
   border: 0px solid #16131a;
 }
@@ -196,10 +210,13 @@ body {
   color: rgba(242, 240, 240, 0.8);
 }
 .personal-test .huge-block .huge-answer:focus {
-  border-image: linear-gradient(to right, #838194, #473857);
+  border-image: linear-gradient(to right, #676c7d, #473857);
 }
 .personal-test .huge-block .huge-answer:focus ~ label {
-  color: #838194;
+  color: #676c7d;
+}
+.inactive {
+  background-color: #212121 !important;
 }
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */

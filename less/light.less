@@ -12,16 +12,16 @@
 
 @purple-dark: #24232E;
 @purple: #473857;
-@purple-light:#838194;
+@purple-light:#BDBFC9;
 
 @beighe: #E2E2BC;
 
-@red-func:#EB4F3C;
-@yellow-func: #EBA63C;
-@green-func: #54C99B;
+@red-func:#EC5745;
+@yellow-func: #ECAA44;
+@green-func: #63CEA4;
 
 
-@green: #1e743d;
+@green: #63CEA4;
 @primary: #11998e;
 @secondary: #38ef7d;
 @gray: #9b9b9b;
@@ -222,6 +222,10 @@ body{
 }
 
 
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
 .progress{
 	color: @dark;
 	&-block{
@@ -246,48 +250,92 @@ body{
 }
 
 
-.theory{
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
+.choose-theory{
 	&-block{
-		background-color: @blue-light;
-		&:hover {
-		  box-shadow:
-		    0px 3.5px @blue;
+		&:hover{
+			box-shadow: 0px 6px 0px #507085, 0px -3px 5px rgba(22,16,26,0.3);;
 		}
-		&-name{
-			color: @dark;
-		}
+	}
+
+	&-header{
+		background-color: #84A2B5;
 	}
 }
 
+.theory{
+	&-header{
 
-.tests{
-	&-block{
-		border: 3px solid @dark;
-		//background-color: @grey;
-		&-header{
+		&-semi{
+		}
+		&-main{
+			border-bottom: 5px solid @dark;
+		}
+	}
 
-			h3{
-				//color:@light;
+	ul{
+		li{
+			&::before{
+				color: @purple-light;
 			}
 		}
 	}
+
+	.example{
+		border: 4px solid @purple-light;
+		&-text{
+		}
+		&-solution{
+			&-header{
+			}
+		}
+		&-answer{
+		}
+	}
 }
+
+/* ----------------------------------------------------------------------------------------
+----------------------------------------------------  */
+
+
+.choose-test{
+
+	&-block{
+		background-color: #84A2B5;
+	}
+
+	&-header{
+		border-bottom: 7px solid #D8DDDA
+	}
+
+	&-recom{
+		//box-shadow: 0px 5px 5px rgba(0,0,0,0.3);
+		//background-color: @grey;
+		&-green{
+			color: #1F6449;
+		}
+	}
+} 
 
 
 .personal-test{
 	
 	&-block{
-		box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.8);
+		box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.4);
 		background-color: @purple-light;
-		color: @light;
+		color: @dark;
 		border: 0px solid @dark;
 		
 		&:hover{
-			box-shadow:  0 10px 15px 2px rgba(0,0,0,0.8);
+			box-shadow:  0 2px 5px rgba(0,0,0,0.5);
 		}
 	}
 
 	.second-part{
+		color: @light;
 		background-color: @purple;
 	}
 
@@ -322,6 +370,12 @@ body{
 		}
 	}	
 }
+
+
+.inactive{
+	background-color: @grey !important;
+}
+
 
 
 
