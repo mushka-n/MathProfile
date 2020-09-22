@@ -94,7 +94,35 @@ button:active:focus,button:focus,{
 }
 
 
+::-webkit-scrollbar-button {
+	background-image:url('');
+	background-repeat:no-repeat;
+	width:6px;
+	height:0px
+}
 
+::-webkit-scrollbar-track {
+	background-color:transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-image:url('https://yraaa.ru/_pu/24/59610063.png');
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+::-webkit-resizer{
+	background-image:url('');
+	background-repeat:no-repeat;
+	width:7px;
+	height:0px
+}
+
+::-webkit-scrollbar{
+	width: 12px;
+}
 
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
@@ -868,30 +896,41 @@ button:active:focus,button:focus,{
 
 	&-header{
 		.bold();
+		font-style: italic;
 		text-align: center;
 		font-size: 3rem;
 		margin-bottom: 2rem;
 		margin-top: 3rem;
 		&-semi{
-			margin-top: 3rem;
+			font-style: italic;
+			margin-top: 2rem;
 			font-size: 2rem;
 			text-align: center;
-			margin-bottom: 0.6rem;
+			margin-bottom: 1rem;
+			border-top: 2px solid @purple-light;
+			padding-top: 2rem;
+			&-noborder{
+				border: none;
+			}
 		}
 		&-main{
+			font-style: normal;
 			padding-bottom: 2rem;
 			text-align: center;
 			font-size: 3.7rem;
-			margin-bottom: 3rem;
+			margin-bottom: 3.5rem;
 			border-radius: 5px;
 		}
 	}
 
 	ul{
 		list-style: none;
+		list-style-position: outside;
+		margin: 2rem 0 2rem;
 		li{
 			margin: 0.25rem;
 			margin-left: -1.5rem;
+			margin-bottom: 1rem;
 			&::before{
 				content: '\00BB';
 				width: 2rem;
@@ -901,6 +940,51 @@ button:active:focus,button:focus,{
 				line-height: 2rem;
 				text-align: center;
 				margin-right: 0.5rem;
+			}
+		}
+
+		&.withborders{
+			li{
+				border-bottom: 1px solid @purple-light;
+				margin-bottom: 0.25rem;
+				padding: 1rem 0 1rem;
+				width: 90%;
+				margin: 0.25em auto;
+			}
+			.withborders-last{
+				border:none;
+			}
+		}
+		
+	}
+
+	.definition{
+		text-decoration:underline;
+	}
+
+	.strong{
+		font-weight: 600;
+	}
+
+	.italic{
+		font-style: italic;
+	}
+
+	.MathJax, .CtxtMenu_Attached_0, mjx-container[jax="CHTML"][display="true"]{
+		display: inline-block ;//!important;
+		width: auto;
+		margin: 0 1rem 0.5rem 1rem;
+	}
+
+	&-image{
+		width: 19rem;
+		margin: 1.5rem 0 1.5rem;
+		&-huge{
+			display: block;
+			margin: 1.5rem auto 1.5rem;
+			width: 68rem;
+			&-semi{
+				width: 34rem;
 			}
 		}
 	}
@@ -923,7 +1007,7 @@ button:active:focus,button:focus,{
 		}
 
 		&-answer{
-			.bold();
+			font-style: italic;
 			font-size: 1.7rem;
 		}
 	}

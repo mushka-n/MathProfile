@@ -60,13 +60,9 @@
     <div class="menu-skipper"></div>
 
     <div class="theory">
-    	<div class="container">
+        <div class="container">
 
-        <div class="theory-header theory-header-main">Задание 2</div>
-
-
-
-    	</div>
+        </div>
     </div>
 
 
