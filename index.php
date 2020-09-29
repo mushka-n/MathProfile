@@ -67,12 +67,12 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
                 <div class="col-8 offset-2">
                     <div class="options">
                         <div class="options-progress">
-                            <form class="margin" action="functional/progress.php">
+                            <form class="margin if_auth" action="functional/progress.php">
                                 <button class="button for_auth" type="submit">мой прогресс</button>
                             </form>
-                            <form action="">
+                            <!-- <form action="">
                                 <button class="button for_auth" type="submit">внести изменения</button>
-                            </form>
+                            </form> -->
                         </div>
                         <div class="options-functional">
                             <form action="theory/theory.php">
@@ -81,9 +81,9 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
                             <form action="tests/choose_test.php">
                                 <button class="button" type="submit" >составить вариант</button>
                             </form>
-                            <form action="">
+                            <!-- <form action="">
                                 <button class="button" id="button" type="submit">печатные материалы</button>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,8 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
     <script>
         if ('<?php echo $loginout?>' == 'Войти'){
             $('#loginout').attr('href','vendor/authorisation.php')
-            $('.for_auth').css("opacity","0.5")
+            $('.for_auth').css("opacity","0.5");
+            $('.if_auth').attr('action','vendor/authorisation.php')
         }
     </script>
 

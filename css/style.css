@@ -15,14 +15,12 @@
 ----------------------------------------------------  */
 /* Базовые настройки */
 html {
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   height: 100vh;
   font-size: 10px;
   overflow: auto;
 }
 body {
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
   height: 100vh;
   margin: 0;
@@ -52,8 +50,7 @@ button:focus {
   outline-color: transparent!important;
   outline-width: 0!important;
   outline-style: none!important;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
-          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 ::-webkit-scrollbar-button {
   background-image: url('');
@@ -65,6 +62,7 @@ button:focus {
   background-color: transparent;
 }
 ::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
   border-radius: 5px;
   background-image: url('https://yraaa.ru/_pu/24/59610063.png');
   background-position: center;
@@ -97,14 +95,12 @@ button:focus {
   z-index: 1;
   position: fixed;
   width: 100%;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 .menu-block {
   display: inline-block;
 }
 .menu-block-a {
-  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 .menu-logo {
@@ -117,7 +113,6 @@ button:focus {
   height: 10rem;
 }
 .menu-logo a img {
-  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
   margin-right: 1.5rem;
   display: table-cell;
@@ -145,9 +140,7 @@ button:focus {
 }
 /* Переключатель тем */
 .theme-switch {
-  -webkit-filter: invert(1);
-          filter: invert(1);
-  -webkit-transition: 0.4s ease-in-out;
+  filter: invert(1);
   transition: 0.4s ease-in-out;
   background-size: contain;
   z-index: 2;
@@ -186,16 +179,12 @@ button:focus {
   text-align: center;
   letter-spacing: 3px;
   font-weight: 600;
-  -webkit-box-shadow: 0 8px 15px rgba(22, 19, 26, 0.1);
-          box-shadow: 0 8px 15px rgba(22, 19, 26, 0.1);
-  -webkit-transition: .3s;
+  box-shadow: 0 8px 15px rgba(22, 19, 26, 0.1);
   transition: .3s;
 }
 .button:hover {
-  -webkit-box-shadow: 0 15px 20px rgba(22, 19, 26, 0.5);
-          box-shadow: 0 15px 20px rgba(22, 19, 26, 0.5);
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
+  box-shadow: 0 15px 20px rgba(22, 19, 26, 0.5);
+  transform: translateY(-7px);
 }
 /* Модальное окно */
 .popup {
@@ -355,8 +344,7 @@ button:focus {
 }
 .quiz-progress-block {
   z-index: 2;
-  -webkit-box-shadow: 0 10px 20px -12px rgba(22, 19, 26, 0.8);
-          box-shadow: 0 10px 20px -12px rgba(22, 19, 26, 0.8);
+  box-shadow: 0 10px 20px -12px rgba(22, 19, 26, 0.8);
   padding: 1rem;
   border-radius: 7px;
   color: #ebece6;
@@ -398,19 +386,15 @@ button:focus {
   width: 90%;
   margin: 1.3rem auto 1rem;
   border-radius: 5px;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .quiz-progress-block .wrap-task-name:hover {
-  -webkit-transform: translateY(-5px);
-          transform: translateY(-5px);
-  -webkit-box-shadow: 0px 5px #4E6E82;
-          box-shadow: 0px 5px #4E6E82;
+  transform: translateY(-5px);
+  box-shadow: 0px 5px #4E6E82;
 }
 .quiz-progress-block .wrap-task-name .task-name {
   margin-bottom: 0rem;
-  -webkit-box-shadow: 0 10px 20px -12px rgba(22, 19, 26, 0.22);
-          box-shadow: 0 10px 20px -12px rgba(22, 19, 26, 0.22);
+  box-shadow: 0 10px 20px -12px rgba(22, 19, 26, 0.22);
   background-color: #84a2b5;
   color: #16131a;
   padding: 1.6rem;
@@ -463,27 +447,17 @@ button:focus {
   opacity: 0;
 }
 .quiz-progress-block-type .wrap .score-checkbox + label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  align-items: center;
+  user-select: none;
 }
 .quiz-progress-block-type .wrap .score-checkbox + label::before {
   content: '';
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
   border: 3px solid #84a2b5;
   border-radius: 0.25em;
   background-repeat: no-repeat;
@@ -498,8 +472,7 @@ button:focus {
   border-color: #84a2b5;
 }
 .quiz-progress-block-type .wrap .score-checkbox:focus + label::before {
-  -webkit-box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
-          box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
+  box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
 }
 .quiz-progress-block-type .wrap .score-checkbox:focus:not(:checked) + label::before {
   border-color: #84a2b5;
@@ -530,7 +503,6 @@ button:focus {
   border-right: 7.5px solid #84a2b5;
   border-radius: 18px;
   cursor: pointer;
-  -webkit-transition: .1s;
   transition: .1s;
 }
 .quiz-progress-block-type .wrap .score-slider::-webkit-slider-thumb:hover,
@@ -576,8 +548,7 @@ button:focus {
   color: #ebece6;
 }
 .quiz-progress button:hover {
-  -webkit-box-shadow: 0 15px 20px rgba(22, 19, 26, 0.6);
-          box-shadow: 0 15px 20px rgba(22, 19, 26, 0.6);
+  box-shadow: 0 15px 20px rgba(22, 19, 26, 0.6);
   color: #ebece6;
 }
 .quiz-progress .scrolldown {
@@ -589,19 +560,18 @@ button:focus {
 .profile {
   background-size: cover;
   height: 100%;
-  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
 .profile .options {
-  margin-top: 38%;
+  margin-top: 43%;
 }
 .profile .options-progress {
   text-align: center;
 }
 .profile .options-progress form {
-  width: 43%;
+  width: 90%;
   display: inline-block;
-  margin: 2rem 0;
+  margin: 2rem 5% 2rem 5%;
 }
 .profile .options-progress form button {
   margin: 0;
@@ -616,7 +586,7 @@ button:focus {
 }
 .profile .options-functional form button {
   width: 90%;
-  margin: 0 0 0 5%;
+  margin: 0 5% 0 5%;
 }
 .profile .zefirka-block {
   display: none;
@@ -690,7 +660,6 @@ button:focus {
   width: 30rem;
   margin: 1.5rem;
   padding: 2rem;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 .progress-block .task-number {
@@ -702,8 +671,7 @@ button:focus {
   text-align: center;
   margin: 1rem auto 2rem;
   width: 90%;
-  -webkit-box-shadow: 0px 5px 10px rgba(22, 19, 26, 0.3);
-          box-shadow: 0px 5px 10px rgba(22, 19, 26, 0.3);
+  box-shadow: 0px 5px 10px rgba(22, 19, 26, 0.3);
   height: 7rem;
 }
 .progress-block .wrap-task-name .task-name {
@@ -733,22 +701,16 @@ button:focus {
   width: 28%;
 }
 .progress-block-red:hover {
-  -webkit-box-shadow: 0px 7px #C52714;
-          box-shadow: 0px 7px #C52714;
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
+  box-shadow: 0px 7px #C52714;
+  transform: translateY(-7px);
 }
 .progress-block-yellow:hover {
-  -webkit-box-shadow: 0px 7px #C17D14;
-          box-shadow: 0px 7px #C17D14;
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
+  box-shadow: 0px 7px #C17D14;
+  transform: translateY(-7px);
 }
 .progress-block-green:hover {
-  -webkit-box-shadow: 0px 7px #319D73;
-          box-shadow: 0px 7px #319D73;
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
+  box-shadow: 0px 7px #319D73;
+  transform: translateY(-7px);
 }
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
@@ -759,7 +721,6 @@ button:focus {
 }
 .choose-theory-block {
   margin: 1.5rem;
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   display: inline-table;
   text-align: center;
@@ -768,8 +729,7 @@ button:focus {
   border-radius: 10px;
 }
 .choose-theory-block:hover {
-  -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
+  transform: translateY(-6px);
 }
 .choose-theory-header {
   border: none;
@@ -873,15 +833,24 @@ button:focus {
 .theory-image-huge-semi {
   width: 34rem;
 }
+.theory-image-example {
+  display: block;
+  width: 60%;
+  margin: 1.5rem auto 1.5rem;
+}
 .theory .example {
   margin: 2rem 0 2rem;
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   border-radius: 5px;
 }
 .theory .example-solution-header {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
+  width: 9rem;
+  border-bottom: 2px solid #473857;
+  margin-bottom: 1.5rem;
+  margin-top: 1.2rem;
 }
 .theory .example-answer {
   font-style: italic;
@@ -954,7 +923,6 @@ button:focus {
   font-weight: 600;
 }
 .personal-test-tasks .wrap .personal-test-block {
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   font-size: 1.4rem;
   z-index: 0;
@@ -967,10 +935,8 @@ button:focus {
   min-height: 10rem;
 }
 .personal-test-tasks .wrap .personal-test-block:hover {
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  transform: translateY(-7px);
+  transform: scale(1.05);
   z-index: 999;
 }
 .personal-test-tasks .wrap .personal-test-block:not(:hover) {
@@ -984,7 +950,6 @@ button:focus {
   vertical-align: middle;
 }
 .personal-test-tasks .wrap .second-part p {
-  -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
   padding-top: 2.25rem;
 }
@@ -1021,17 +986,7 @@ button:focus {
   color: #fff;
   padding: 7px 0;
   background: transparent;
-  -webkit-transition: border-color 0.2s;
   transition: border-color 0.2s;
-}
-.personal-test .huge-block .huge-answer::-webkit-input-placeholder {
-  color: transparent;
-}
-.personal-test .huge-block .huge-answer:-ms-input-placeholder {
-  color: transparent;
-}
-.personal-test .huge-block .huge-answer::-ms-input-placeholder {
-  color: transparent;
 }
 .personal-test .huge-block .huge-answer::placeholder {
   color: transparent;
@@ -1045,7 +1000,6 @@ button:focus {
   position: absolute;
   top: 0;
   display: block;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   font-size: 1rem;
   color: #9b9b9b;
@@ -1054,16 +1008,13 @@ button:focus {
   padding-bottom: 6px;
   font-weight: 700;
   border-width: 3px;
-  -o-border-image: linear-gradient(to right, #797e91, #473857);
-     border-image: -webkit-gradient(linear, left top, right top, from(#797e91), to(#473857));
-     border-image: linear-gradient(to right, #797e91, #473857);
+  border-image: linear-gradient(to right, #797e91, #473857);
   border-image-slice: 1;
 }
 .personal-test .huge-block .huge-answer:focus ~ .huge-answer-label {
   position: absolute;
   top: 0;
   display: block;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   font-size: 1.5rem;
   color: #797e91;
@@ -1071,8 +1022,7 @@ button:focus {
 }
 .personal-test .huge-block .huge-answer:required,
 .personal-test .huge-block .huge-answer:invalid {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 .personal-test .huge button {
   display: block;
@@ -1170,7 +1120,6 @@ button:focus {
   background: #16131a;
   outline: none;
   -webkit-transition: .2s;
-  -webkit-transition: opacity .2s;
   transition: opacity .2s;
 }
 .results .huge-answers-user .part2-slider::-webkit-slider-thumb {
@@ -1193,14 +1142,11 @@ button:focus {
 .results .huge-answers-show-solution {
   background-color: #473857;
   cursor: pointer;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 .results .huge-answers-show-solution:hover {
-  -webkit-transform: translateY(-7px);
-          transform: translateY(-7px);
-  -webkit-box-shadow: 0px 7px #16131a;
-          box-shadow: 0px 7px #16131a;
+  transform: translateY(-7px);
+  box-shadow: 0px 7px #16131a;
 }
 .results .huge-solution {
   width: 85rem;
@@ -1225,16 +1171,9 @@ button:focus {
   display: none;
 }
 .results .huge .flag input + label {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  align-items: center;
+  user-select: none;
 }
 .results .huge .flag input + label::before {
   content: '';
@@ -1243,11 +1182,8 @@ button:focus {
   width: 2rem;
   margin-top: 1.42rem;
   margin-right: 1rem;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
+  flex-shrink: 0;
+  flex-grow: 0;
   border: 3px solid #473857;
   border-radius: 0.25em;
   background-repeat: no-repeat;
@@ -1262,8 +1198,7 @@ button:focus {
   border-color: #473857;
 }
 .results .huge .flag input:focus + label::before {
-  -webkit-box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
-          box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
+  box-shadow: 0 0 0 0.5rem rgba(132, 162, 181, 0.25);
 }
 .results .huge .flag input:focus:not(:checked) + label::before {
   border-color: #473857;
