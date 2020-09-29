@@ -52,7 +52,7 @@
     for ($i=2; $i<count($tasks_names);$i+=2){
         if ($tasks_names[$i][1] == '_'){
             $task_num = $tasks_names[$i][0];
-            $tasks_names[$i][2];
+            $task_type = $tasks_names[$i][2];
         } else {
             $task_num = $tasks_names[$i][0].$tasks_names[$i][1];
             $task_type = $tasks_names[$i][3]; if ($task_names == '1' && $tasks_names[$i][4] == '0') $task_type = '10';
@@ -265,7 +265,8 @@
             JSON.parse(<?php echo json_encode($pr16)?>),
             JSON.parse(<?php echo json_encode($pr17)?>),
             JSON.parse(<?php echo json_encode($pr18)?>),
-            JSON.parse(<?php echo json_encode($pr19)?>),];
+            JSON.parse(<?php echo json_encode($pr19)?>)
+        ];
 
         let tasks_nums = JSON.parse(<?php echo json_encode($tasks_nums)?>);
 
@@ -288,9 +289,12 @@
             /*16*/  [30,25,25,20],
             /*17*/  [70,30],
             /*18*/  [10,10,10,10,10,10,10,10,10,10],
-            /*19*/  [40,25,20,15]];
+            /*19*/  [40,25,20,15]
+        ];
 
         let types=[]; let rygs=[]; let paths=[];
+
+        console.log(tasks_nums);
 
         for (let n=0; n<19; n++)
         {

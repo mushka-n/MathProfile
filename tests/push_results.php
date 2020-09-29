@@ -25,9 +25,10 @@ for ($i=1; $i<$n; $i++){
 	$task_diff = (int)($_POST['diffs'][$i-1])-1;
 	// 0 - g   1 - y   2 - r
 
+	// определяем тип задания 
 	$task_type = (((int)($_POST['types'][$i-1]))+1);
 
-	// определяем тип задания
+	// определяем тип задания (с точкой)
 	$task_dot_type = $i .'.'.(((int)($_POST['types'][$i-1]))+1);
 	
 	// получаем существующую статистику по заданию
@@ -66,14 +67,14 @@ for ($i=1; $i<$n; $i++){
 							  WHERE   `id`= '$id'"				);
 }
 
+
+// если вторая часть учитывается - считаем все оставшееся
 if ($n == 13){
 	for ($i=13; $i<20; $i++){
 		$task_wh =  mysqli_fetch_assoc(mysqli_query($connect,"SELECT * FROM `$i`  WHERE `id` = '$id'"));
 		$pr_fins[$i] = (int)($task_wh[$i]);
 	}
 }
-
-
 
 	// считаем общий прогресс ученика и вносим в базу
 	for ($i=1;  $i<=12; $i++) $result+= $pr_fins[$i];

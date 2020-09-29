@@ -50,11 +50,6 @@
 		$nums[$i]  = (int) substr( $_POST[ 't'.($i+1) ] ,4);
 
 		$right_answers[$i] = $answers [$diffs[$i]-1] [$i] [$types[$i]] [$nums[$i]-1];
-
-		/*echo $diffs[$i] . $types[$i] . $nums[$i];
-		echo ('<br>   answer: ');
-		print_r($answers [$diffs[$i]-1] [$i] [$types[$i]] [$nums[$i]-1] );
-		echo ('<br>');*/
 	}
 
 	$user_answers = [];
@@ -352,6 +347,8 @@
 
         for (let i =1; i<20;i++){
             $('#ha' + i).css('display','none');
+            $('.huge-solution-img').css('display','none');
+            $('.huge-solution-img').css('border','none');
         }
 
         if (!$(this).hasClass('inactive')){
@@ -411,6 +408,8 @@
     $('#flag').click(function (event){
         if($(this).prop("checked")){
             for (let i=13;i<20;i++){
+                $('.huge-solution-img').css('display','none');
+                $('.huge-solution-img').css('border','none');
                 $('.huge-answers').css('display','none');
                 $('.huge-task').css('display','none');
                 $('.huge-task').css('border','none');
