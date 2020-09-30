@@ -185,10 +185,13 @@ body {
   background-color: #7B6F7D;
 }
 .choose-test-header {
-  border-bottom: 7px solid #24232e;
+  border-bottom: 8px solid #24232e;
+}
+.choose-test-recom {
+  border-bottom: 8px solid #24232e;
 }
 .choose-test-recom-green {
-  color: #54c99b;
+  background-color: #54c99b;
 }
 .personal-test-block {
   box-shadow: 0 4px 20px -12px rgba(0, 0, 0, 0.8);

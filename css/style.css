@@ -51,7 +51,6 @@ button:focus {
   outline-width: 0!important;
   outline-style: none!important;
   box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
-
 }
 ::-webkit-scrollbar-button {
   background-image: url('');
@@ -865,29 +864,29 @@ button:focus {
   padding-top: 3rem;
 }
 .choose-test-block {
-  padding: 2rem;
+  padding: 2rem 0;
   text-align: center;
-  display: inline-block;
+  display: inline-table;
   width: 40rem;
   height: auto;
   border-radius: 10px;
+  margin: 1.3rem;
 }
 .choose-test-header {
   width: 40rem;
   padding-bottom: 1.5rem;
-  margin-left: -2rem;
   font-size: 2.4rem;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  margin-bottom: 3rem;
 }
 .choose-test-discr {
+  width: 80%;
+  margin: 3rem auto 2rem;
   font-weight: 450;
-  margin-bottom: 3rem;
   font-size: 1.7rem;
 }
 .choose-test-recom {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   margin-bottom: 1rem;
   font-size: 1.3rem;
@@ -895,9 +894,6 @@ button:focus {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
   text-shadow: 0px 2px 5px rgba(22, 19, 26, 0.15);
-}
-.choose-test-recom-green {
-  border-radius: 5px;
 }
 .personal-test-tasks {
   text-align: center;

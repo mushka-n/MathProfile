@@ -64,6 +64,9 @@ elseif ($result > 29 ) $result = 100;
     <meta charset="UTF-8">
     <title>MathProfile</title>
 
+    <!-- Favicon -->
+    <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
+
     <!--Bootsrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -249,10 +252,6 @@ elseif ($result > 29 ) $result = 100;
                     <div class="progress-block-type">
                         <p class="progress-block-type-name">Трапеция</p>
                         <div class="progress-block-type-data"><?php echo($pr6['6.4']) ?>%</div>
-                    </div>
-                    <div class="progress-block-type">
-                        <p class="progress-block-type-name">Окружность</p>
-                        <div class="progress-block-type-data"><?php echo($pr6['6.5']) ?>%</div>
                     </div>
                 </div>
 
@@ -683,6 +682,9 @@ elseif ($result > 29 ) $result = 100;
 
 
 <script>
+
+    $(document).ready(function(){
+
     var fpr_points  = parseInt(document.getElementById('fpoints').textContent);
     var fpr_percent = parseInt((document.getElementById('fpercent').textContent).slice(0,-1));
     //alert(fpr_points+' '+fpr_percent);
@@ -696,10 +698,6 @@ elseif ($result > 29 ) $result = 100;
     else if (fpr_percent>27 && fpr_percent<80)    $('#fpercent').css("border","5px solid #EBA63C")
     else                                          $('#fpercent').css("border","5px solid #54C99B")
 
-
-</script>
-
-<script>
     
     $('.progress-block').click(function(event){
         if ($(this).children('.progress-block-type').css("display") == "table"){
@@ -708,9 +706,8 @@ elseif ($result > 29 ) $result = 100;
             $(this).children('.progress-block-type').css("display","table")
         }
     });
-</script>
 
-<script>
+
     for (let i=1; i<20; i++){
         let taskpr = (document.getElementById('tn'+i).textContent).slice(-3,-1);
         if      (taskpr == "00") taskpr = "100"; 
@@ -722,6 +719,9 @@ elseif ($result > 29 ) $result = 100;
         else if (taskpr>30 && taskpr<80)    $('#'+i).addClass("progress-block-yellow")
         else                                $('#'+i).addClass("progress-block-green")
     }
+
+
+    });
 
 </script>
     

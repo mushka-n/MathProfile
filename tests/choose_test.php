@@ -1,10 +1,6 @@
 <?php
     session_start();
 
-    
-    /*Присоединение базы данных 'mathege'*/
-    //require_once '../vendor/connect.php'; 
-
     if (!$_SESSION['user']) {
         //header('Location: ../index.php');   
     } else {
@@ -68,24 +64,32 @@
     <div class="menu-skipper"></div>
 
     <div class="choose-test">
+
+      <div class="choose-test-block">
+            <div class="choose-test-header">Случайный вариант</div>
+            <div class="choose-test-discr">Стандартный тест из 19 случайных заданий</div>
+            
+           <form action="rand_test.php">
+               <button class="button">Перейти к выполнению</button>
+           </form>
+           <!-- <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div> -->
+        </div>
+
         <div class="choose-test-block">
-            <div class="choose-test-header">Персональный тест</div>
+            <div class="choose-test-header">Персональный вариант</div>
+            <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div>
             <div class="choose-test-discr">Алгоритм подбирает 19 заданий того подтипа и сложности, что соответствуют вашему прогрессу</div>
             
            <form action="pr_test.php">
                <button class="button">Перейти к выполнению</button>
            </form>
-           <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div>
+           
         </div>
+
+        
     </div>
 
 
-
-<script>
-    $(document).ready(function(){
-
-    });
-</script>
 
     
 </body>

@@ -275,6 +275,9 @@
     
 
 <script>
+
+    $(document).ready(function(){
+
 	 $('.part2-slider').click(function (event){
 	 	let task = parseInt($(this).attr("name").slice(-2));
 		if 		($(this).val() == 0) {
@@ -378,7 +381,7 @@
  	let part1val = '';
  	for (let i =0; i<12; i++){
  		
- 		if (user_answers[i] == answers[i]){
+ 		if (user_answers[i] == answers[i] || user_answers[i]!=''){
  			$('#ptb'+(i+1)).css('background-color',"#54C99B");
  			$('#ha'+(i+1)).children('.huge-answers-user').css('background-color',"#54C99B");
  			part1val += '1';
@@ -424,6 +427,9 @@
         }
         
     }); 
+
+
+});
 
 </script>
 

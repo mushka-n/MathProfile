@@ -212,8 +212,8 @@ mysqli_query($connect, "INSERT INTO `4`(`id`,`4`,`4.1`,`4.2`)
 mysqli_query($connect, "INSERT INTO `5`(`id`,`5`,`5.1`,`5.2`,`5.3`,`5.4`,`5.5`,`5.6`)
                                 VALUES ('$id','$t5','$t5_1','$t5_2','$t5_3','$t5_4','$t5_5','$t5_6')");
 
-mysqli_query($connect, "INSERT INTO `6`(`id`,`6`,`6.1`,`6.2`,`6.3`,`6.4`,`6.5`)
-                                VALUES ('$id','$t6','$t6_1','$t6_2','$t6_3','$t6_4','$t6_5')");
+mysqli_query($connect, "INSERT INTO `6`(`id`,`6`,`6.1`,`6.2`,`6.3`,`6.4`)
+                                VALUES ('$id','$t6','$t6_1','$t6_2','$t6_3','$t6_4')");
 
 mysqli_query($connect, "INSERT INTO `7`(`id`,`7`,`7.1`,`7.2`,`7.3`,`7.4`)
                                 VALUES ('$id','$t7','$t7_1','$t7_2','$t7_3','$t7_4')");
