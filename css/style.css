@@ -51,6 +51,32 @@ button:focus {
   outline-width: 0!important;
   outline-style: none!important;
   box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+
+}
+::-webkit-scrollbar-button {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 6px;
+  height: 0px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  background-image: url('https://yraaa.ru/_pu/24/59610063.png');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+::-webkit-resizer {
+  background-image: url('');
+  background-repeat: no-repeat;
+  width: 7px;
+  height: 0px;
+}
+::-webkit-scrollbar {
+  width: 12px;
 }
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
@@ -538,15 +564,15 @@ button:focus {
   transition: 0.4s ease-in-out;
 }
 .profile .options {
-  margin-top: 38%;
+  margin-top: 43%;
 }
 .profile .options-progress {
   text-align: center;
 }
 .profile .options-progress form {
-  width: 43%;
+  width: 90%;
   display: inline-block;
-  margin: 2rem 0;
+  margin: 2rem 5% 2rem 5%;
 }
 .profile .options-progress form button {
   margin: 0;
@@ -561,7 +587,7 @@ button:focus {
 }
 .profile .options-functional form button {
   width: 90%;
-  margin: 0 0 0 5%;
+  margin: 0 5% 0 5%;
 }
 .profile .zefirka-block {
   display: none;
@@ -724,30 +750,41 @@ button:focus {
 .theory-header {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
+  font-style: italic;
   text-align: center;
   font-size: 3rem;
   margin-bottom: 2rem;
   margin-top: 3rem;
 }
 .theory-header-semi {
-  margin-top: 3rem;
+  font-style: italic;
+  margin-top: 2rem;
   font-size: 2rem;
   text-align: center;
-  margin-bottom: 0.6rem;
+  margin-bottom: 1rem;
+  border-top: 2px solid #797e91;
+  padding-top: 2rem;
+}
+.theory-header-semi-noborder {
+  border: none;
 }
 .theory-header-main {
+  font-style: normal;
   padding-bottom: 2rem;
   text-align: center;
   font-size: 3.7rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   border-radius: 5px;
 }
 .theory ul {
   list-style: none;
+  list-style-position: outside;
+  margin: 2rem 0 2rem;
 }
 .theory ul li {
   margin: 0.25rem;
   margin-left: -1.5rem;
+  margin-bottom: 1rem;
 }
 .theory ul li::before {
   content: '\00BB';
@@ -759,19 +796,65 @@ button:focus {
   text-align: center;
   margin-right: 0.5rem;
 }
+.theory ul.withborders li {
+  border-bottom: 1px solid #797e91;
+  margin-bottom: 0.25rem;
+  padding: 1rem 0 1rem;
+  width: 90%;
+  margin: 0.25em auto;
+}
+.theory ul.withborders .withborders-last {
+  border: none;
+}
+.theory .definition {
+  text-decoration: underline;
+}
+.theory .strong {
+  font-weight: 600;
+}
+.theory .italic {
+  font-style: italic;
+}
+.theory .MathJax,
+.theory .CtxtMenu_Attached_0,
+.theory mjx-container[jax="CHTML"][display="true"] {
+  display: inline-block;
+  width: auto;
+  margin: 0 1rem 0.5rem 1rem;
+}
+.theory-image {
+  width: 19rem;
+  margin: 1.5rem 0 1.5rem;
+}
+.theory-image-huge {
+  display: block;
+  margin: 1.5rem auto 1.5rem;
+  width: 68rem;
+}
+.theory-image-huge-semi {
+  width: 34rem;
+}
+.theory-image-example {
+  display: block;
+  width: 60%;
+  margin: 1.5rem auto 1.5rem;
+}
 .theory .example {
   margin: 2rem 0 2rem;
-  padding: 3rem 2rem 2rem 2rem;
+  padding: 2rem 2rem 2rem 2rem;
   border-radius: 5px;
 }
 .theory .example-solution-header {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
+  width: 9rem;
+  border-bottom: 2px solid #473857;
+  margin-bottom: 1.5rem;
+  margin-top: 1.2rem;
 }
 .theory .example-answer {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
+  font-style: italic;
   font-size: 1.7rem;
 }
 /* ----------------------------------------------------------------------------------------

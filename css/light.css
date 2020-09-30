@@ -9,6 +9,9 @@ body {
   color: #16131a;
   background-color: #D8DDDA;
 }
+::-webkit-scrollbar-thumb {
+  background-color: #b6c0bb;
+}
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
 /* Меню */
@@ -169,7 +172,7 @@ body {
   border-bottom: 5px solid #16131a;
 }
 .theory ul li::before {
-  color: #bdbfc9;
+  color: #473857;
 }
 .theory .example {
   border: 4px solid #bdbfc9;
