@@ -156,6 +156,13 @@ $(document).ready(function(){
         Save(theme);
     }
 
+    var loginout = document.getElementById("loginout").textContent;
+    if(loginout == 'Войти'){
+        $('#loginout').attr('href','../vendor/authorisation.php')
+        $('.for_auth').css("opacity","0.5");
+        $('.if_auth').attr('action','../vendor/authorisation.php')
+    }
+
 
 
         

@@ -6,6 +6,12 @@
         $_SESSION["theme"] = "light";
     } 
 
+    if (!$_SESSION['user']) {
+        $loginout = 'Войти';
+    } else {
+        $loginout = 'Выход';
+    }
+
 ?>
 
 
@@ -47,7 +53,7 @@
    
                <span class="menu-user menu-block" ><?= $_SESSION['user']['full_name'] ?></span>
    
-               <span class="menu-login-logout menu-block"><a href="../vendor/logout.php" class="menu-block-a" id='login-logout'>Выход</a></span>
+               <span class="menu-login-logout menu-block"><a href="../vendor/logout.php" class="menu-block-a" id='loginout'><?php echo $loginout ?></a></span>
    
            </div>
        </div>

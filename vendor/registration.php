@@ -11,6 +11,10 @@
 <head>
     <meta charset="UTF-8">
     <title>MathProfile</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
+    
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
 

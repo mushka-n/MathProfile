@@ -2,9 +2,9 @@
     session_start();
 
     if (!$_SESSION['user']) {
-        //header('Location: ../index.php');   
+        $loginout = 'Войти';
     } else {
-        $id=$_SESSION['user']['id'];
+        $loginout = 'Выход';
     }
 
 
@@ -53,7 +53,7 @@
    
                <span class="menu-user menu-block" ><?= $_SESSION['user']['full_name'] ?></span>
    
-               <span class="menu-login-logout menu-block"><a href="../vendor/logout.php" class="menu-block-a" id='login-logout'>Выход</a></span>
+               <span class="menu-login-logout menu-block"><a href="../vendor/logout.php" class="menu-block-a" id='loginout'><?php echo $loginout ?></a></span>
    
            </div>
        </div>
@@ -80,8 +80,8 @@
             <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div>
             <div class="choose-test-discr">Алгоритм подбирает 19 заданий того подтипа и сложности, что соответствуют вашему прогрессу</div>
             
-           <form action="pr_test.php">
-               <button class="button">Перейти к выполнению</button>
+           <form action="pr_test.php" class="if_auth">
+               <button class="button for_auth ">Перейти к выполнению</button>
            </form>
            
         </div>
@@ -90,6 +90,17 @@
     </div>
 
 
+<script>
+
+
+    if ('<?php echo $loginout?>' == 'Войти'){
+        $('#loginout').attr('href','../vendor/authorisation.php')
+        $('.for_auth').css("opacity","0.5");
+        $('.if_auth').attr('action','../vendor/authorisation.php')
+    }
+
+
+</script>
 
     
 </body>
