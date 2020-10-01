@@ -67,7 +67,7 @@
 
       <div class="choose-test-block">
             <div class="choose-test-header">Случайный вариант</div>
-            <div class="choose-test-discr">Стандартный тест из 19 случайных заданий</div>
+            <div class="choose-test-discr"><p>Стандартный тест из 19 случайных заданий</p></div>
             
            <form action="rand_test.php">
                <button class="button">Перейти к выполнению</button>
@@ -78,7 +78,7 @@
         <div class="choose-test-block">
             <div class="choose-test-header">Персональный вариант</div>
             <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div>
-            <div class="choose-test-discr">Алгоритм подбирает 19 заданий того подтипа и сложности, что соответствуют Вашему прогрессу</div>
+            <div class="choose-test-discr"><p>Алгоритм подбирает 19 заданий того подтипа и сложности, что соответствуют Вашему прогрессу</p></div>
             
            <form action="pr_test.php" class="if_auth">
                <button class="button for_auth ">Перейти к выполнению</button>
@@ -95,7 +95,7 @@
       <div class="choose-test-block">
             <div class="choose-test-header">Дзен</div>
             <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div>
-            <div class="choose-test-discr">Никаких таймеров, никаких отметок - решайте задания в удобном Вам темпе и не думайте о своей статистике - в режиме "Дзен" ей навредить невозможно</div>
+            <div class="choose-test-discr"><p>Никаких таймеров, никаких отметок - решайте задания в удобном Вам темпе и не думайте о своей статистике - в режиме "Дзен" ей навредить невозможно</p></div>
             
            <form action="dzen.php">
                <button class="button">Перейти к выполнению</button>
@@ -106,7 +106,7 @@
       <div class="choose-test-block">
             <div class="choose-test-header">Блиц</div>
             <div class="choose-test-recom choose-test-recom-yellow">Рекомендовано для подготовленных пользователей</div>
-            <div class="choose-test-discr">Бесконечная череда случайных заданий из первой части, на решение каждого из которых дается лишь 45 секунд</div>
+            <div class="choose-test-discr"><p>Бесконечная череда случайных заданий из первой части, на решение каждого из которых дается лишь 45 секунд</p></div>
             
            <form action="blitz.php">
                <button class="button">Перейти к выполнению</button>

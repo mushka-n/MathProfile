@@ -3,10 +3,11 @@
 	session_start();
 
     if (!$_SESSION['user']) {
-        header('Location: ../index.php');
+        $action = '../index.php';
+        $loginout = 'Войти';
     } else {
-        $id=$_SESSION['user']['id'];
-        $_SESSION['user']['completed_test'] = 1;
+        $action = 'push_results.php';
+        $loginout = 'Выйти';
     }
 
 
@@ -84,7 +85,7 @@
      <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="../css/<?php echo $_SESSION["theme"]; ?>.css" id="theme-link">
-     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
      
      <!-- Скрипты -->
      <script src="../js/scripts.js"> </script>
@@ -205,7 +206,7 @@
                  	<div class="huge-answers-block huge-answers-show-solution">Показать<br>решение</div>
                  </div>
 
-                 <form action="push_results.php" method="POST">
+                 <form action="<?php echo $action ?>" method="POST">
                  	<div class="huge-answers" id="ha13">
                  		<div class="huge-answers-block huge-answers-right">Ответ:<br><?php echo $right_answers[12]?></div>
                  		<div class="huge-answers-block huge-answers-user huge-answers-user-part2">Вы получили:<br><input class="part2-slider" type="range" min="0" max="2" step="1" value="0" name="pta13"><br><span class="part2-count">0 баллов</span></div>

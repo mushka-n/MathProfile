@@ -155,8 +155,13 @@
     </div>
 
 
-    <form action="push_blitz" method="POST" class="blitz-finish">
-        <input type="text" name="blitz"  id="results"  value="" style="display:none">
+    <form action="push_blitz.php" method="POST" class="blitz-finish">
+        
+        <input type="text" name="tasks"  id="tasks"  value="" style="display:block">
+        <input type="text" name="types"  id="types"  value="" style="display:block">
+        <input type="text" name="diffs"  id="diffs"  value="" style="display:block">
+
+        <input type="text" name="blitz"  id="blitz"  value="" style="display:block">
         <button class="button">Сохранить результаты и выйти</button>
     </form>
 
@@ -180,7 +185,7 @@
         console.log(answers);
 
         let tasks_nums = JSON.parse(<?php echo json_encode($tasks_nums)?>);
-        console.log(tasks_nums);
+        
 
         var alltnum=0
         for (let i=0; i<19;i++){
@@ -211,6 +216,39 @@
             return path;
         }
 
+        function check_results(path){
+            splitpath=path.split(/(\d)/);
+            
+
+            if (splitpath[2]==""){
+                $('#tasks').val($('#tasks').val()+'!'+[splitpath[3]]); 
+                $('#types').val($('#types').val()+[splitpath[5]]); 
+                $('#diffs').val($('#diffs').val()+[splitpath[7]]); 
+
+                splitpath[1] = splitpath[1]+splitpath[3];
+                answer=answers[splitpath[7]-1][splitpath[1]-1][splitpath[5]-1][splitpath[9]-1];
+            } else {
+                answer=answers[splitpath[5]-1][splitpath[1]-1][splitpath[3]-1][splitpath[7]-1];
+                $('#tasks').val($('#tasks').val()+[splitpath[1]]); 
+                $('#types').val($('#types').val()+[splitpath[3]]); 
+                $('#diffs').val($('#diffs').val()+[splitpath[5]]); 
+            }        
+
+            var r_answer = document.getElementById("r_answer");
+            r_answer.textContent = answer;
+
+            var u_answer=document.getElementById("u_answer");
+            u_answer.textContent = $('#user_answer').val();
+
+            if ( $('#user_answer').val() == answer){
+                return 1; 
+            } else {
+                return 0;
+            }
+
+
+        }
+
        let timer = setInterval(() => 
             {
                 var curr_time = document.getElementById('countdown')
@@ -229,9 +267,16 @@
         $('.huge-task').attr('src',path);
 
         $('#next_task').click(function(event){
+
+            if (check_results(path)){
+                $('#blitz').val($('#blitz').val()+'1'); 
+            } else {
+                $('#blitz').val($('#blitz').val()+'0'); 
+            }
+
             $('#check_answer').css('display','block');
             $('#results').css('display','none');
-            $('#user_answer').val('');
+            //$('#user_answer').val('');
             cd = document.getElementById('countdown');
             cd.textContent = 45;
 
@@ -243,10 +288,12 @@
             paths[n]=path
             $('.huge-task').attr('src',path);
 
-
             $('.huge-solution-img').css('display','none');
             $('.huge-solution-img').css('border','none');
-            
+
+           
+
+    
         });
 
 
@@ -256,33 +303,15 @@
             cd.textContent = 99999999999999;
 
             $('#check_answer').css('display','none');
-            splitpath=path.split(/(\d)/);
-            
-
-            if (splitpath[2]==""){
-                splitpath[1] = splitpath[1]+splitpath[3];
-                answer=answers[splitpath[7]-1][splitpath[1]-1][splitpath[5]-1][splitpath[9]-1];
-            } else {
-                answer=answers[splitpath[5]-1][splitpath[1]-1][splitpath[3]-1][splitpath[7]-1];
-            }
-
-            
-            
-
-            var r_answer = document.getElementById("r_answer");
-            r_answer.textContent = answer;
-
-            var u_answer=document.getElementById("u_answer");
-            u_answer.textContent = $('#user_answer').val();
-
             $('#results').css('display','block');
             $('.huge-solution-img').attr('src',path.slice(0,-4)+'_s.png')
 
-            if ( $('#user_answer').val() == answer){
+            if (check_results(path)){
                 $('.huge-answers-user').css('border-color',"#54C99B");
             } else {
                 $('.huge-answers-user').css('border-color',"#EB4F3C");
             }
+            
             
         });
 
