@@ -14,7 +14,7 @@
 
 
     if ($_SESSION['test']["done"] == 1){
-       header('Location: ../index.php');
+
     } else {
         $_SESSION['test'] = ["done" => 0];
     }
