@@ -867,13 +867,13 @@ button:focus {
   padding: 2rem 0;
   text-align: center;
   display: inline-table;
-  width: 40rem;
+  width: 43rem;
   height: auto;
   border-radius: 10px;
   margin: 1.3rem;
 }
 .choose-test-header {
-  width: 40rem;
+  width: 100%;
   padding-bottom: 1.5rem;
   font-size: 2.4rem;
   font-family: 'Poppins', sans-serif;
@@ -1102,12 +1102,10 @@ button:focus {
 .results .huge-answers-right {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  border: 3px solid #ebece6;
 }
 .results .huge-answers-user {
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  border: 3px solid #ebece6;
 }
 .results .huge-answers-user .part2-slider {
   -webkit-appearance: none;
@@ -1215,8 +1213,59 @@ button:focus {
   display: table-cell;
   vertical-align: middle;
 }
+.blitz {
+  height: auto;
+}
+.blitz .huge-task {
+  display: block;
+}
+.blitz .huge-block {
+  display: block;
+}
+.blitz-finish {
+  margin-top: 30rem;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+.blitz-finish .button {
+  margin: 0 auto;
+  display: block;
+}
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
+footer {
+  transition: 0.4s ease;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+}
+footer .footer-block {
+  font-size: 1.4rem;
+  display: inline-block;
+  margin: 0.3rem 3rem;
+}
+footer .footer-block a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+footer .footer-block a:hover {
+  text-decoration: underline !important;
+}
+.privacy {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+.privacy h4,
+.privacy h2 {
+  font-size: 2.3rem;
+}
+.privacy h5 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
 /* Адаптивность */
 /* Планшет и меньше */
 @media (max-width: 991px) {

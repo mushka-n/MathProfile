@@ -64,9 +64,6 @@ elseif ($result > 29 ) $result = 100;
     <meta charset="UTF-8">
     <title>MathProfile</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
-
     <!--Bootsrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -680,10 +677,20 @@ elseif ($result > 29 ) $result = 100;
         </div>
     </div>
 
+    <footer>
+        <div class="footer-block">
+            <a href="">© 2019-2020  Мушка Никита</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/privacy.html">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/termsofuse.html">Пользовательское соглашение</a>
+        </div>
+    </footer>
 
 <script>
 
-    $(document).ready(function(){
 
     var fpr_points  = parseInt(document.getElementById('fpoints').textContent);
     var fpr_percent = parseInt((document.getElementById('fpercent').textContent).slice(0,-1));
@@ -719,9 +726,6 @@ elseif ($result > 29 ) $result = 100;
         else if (taskpr>30 && taskpr<80)    $('#'+i).addClass("progress-block-yellow")
         else                                $('#'+i).addClass("progress-block-green")
     }
-
-
-    });
 
 </script>
     

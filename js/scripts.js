@@ -163,6 +163,14 @@ $(document).ready(function(){
         $('.if_auth').attr('action','../vendor/authorisation.php')
     }
 
+    $('img').each(function(){
+        if ($(this).hasClass('huge-solution-img')){
+            $(this).error(function(){ $(this).attr('src', '../tasks/0_0_0_0_s.png'); });
+        } else {
+            $(this).error(function(){ $(this).attr('src', '../tasks/0_0_0_0.png'); });
+        }
+    });
+
 
 
         

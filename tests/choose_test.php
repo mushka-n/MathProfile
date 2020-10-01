@@ -78,7 +78,7 @@
         <div class="choose-test-block">
             <div class="choose-test-header">Персональный вариант</div>
             <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div>
-            <div class="choose-test-discr">Алгоритм подбирает 19 заданий того подтипа и сложности, что соответствуют вашему прогрессу</div>
+            <div class="choose-test-discr">Алгоритм подбирает 19 заданий того подтипа и сложности, что соответствуют Вашему прогрессу</div>
             
            <form action="pr_test.php" class="if_auth">
                <button class="button for_auth ">Перейти к выполнению</button>
@@ -89,6 +89,49 @@
         
     </div>
 
+    <div class="choose-test">
+
+
+      <div class="choose-test-block">
+            <div class="choose-test-header">Дзен</div>
+            <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div>
+            <div class="choose-test-discr">Никаких таймеров, никаких отметок - решайте задания в удобном Вам темпе и не думайте о своей статистике - в режиме "Дзен" ей навредить невозможно</div>
+            
+           <form action="dzen.php">
+               <button class="button">Перейти к выполнению</button>
+           </form>
+           <!-- <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div> -->
+        </div>
+
+      <div class="choose-test-block">
+            <div class="choose-test-header">Блиц</div>
+            <div class="choose-test-recom choose-test-recom-yellow">Рекомендовано для подготовленных пользователей</div>
+            <div class="choose-test-discr">Бесконечная череда случайных заданий из первой части, на решение каждого из которых дается лишь 45 секунд</div>
+            
+           <form action="blitz.php">
+               <button class="button">Перейти к выполнению</button>
+           </form>
+           <!-- <div class="choose-test-recom choose-test-recom-green">Рекомендовано для любых пользователей</div> -->
+        </div>
+
+
+
+        
+    </div>
+
+
+
+    <footer>
+        <div class="footer-block">
+            <a href="">© 2019-2020  Мушка Никита</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/privacy.html">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/termsofuse.html">Пользовательское соглашение</a>
+        </div>
+    </footer>
 
 <script>
 

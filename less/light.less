@@ -323,6 +323,9 @@ background-color:@green-light;
 		&-green{
 			background-color: @green-func;
 		}
+		&-yellow{
+			background-color: @yellow-func;
+		}
 	}
 } 
 
@@ -377,9 +380,39 @@ background-color:@green-light;
 	}	
 }
 
+.results{
+
+	.huge{
+
+			
+		&-answers{
+			&-right{
+				border: 3px solid @dark;
+
+			}
+
+			&-user{
+				border: 3px solid @dark;
+			}
+		}
+
+	}	
+}
+
 
 .inactive{
 	background-color: @grey !important;
+}
+
+
+
+footer{
+    background: #D8DDDA;
+    .footer-block{
+    	a{
+    		color: @dark;
+    	}
+    }
 }
 
 

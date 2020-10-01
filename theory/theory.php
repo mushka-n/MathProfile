@@ -86,6 +86,17 @@
         <form action="19.php" class="choose-theory-block"><button type="submit" class="choose-theory-header">Задание 19</button></form>
     </div>
 
+    <footer>
+        <div class="footer-block">
+            <a href="">© 2019-2020  Мушка Никита</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/privacy.html">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/termsofuse.html">Пользовательское соглашение</a>
+        </div>
+    </footer>
 
 
 <script>

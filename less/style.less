@@ -28,7 +28,6 @@
 @secondary: #38ef7d;
 @gray: #9b9b9b;
 
-
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
 
@@ -1037,14 +1036,14 @@ button:active:focus,button:focus,{
 		padding: 2rem 0;
 		text-align: center;
 		display: inline-table;
-		width: 40rem;
+		width: 43rem;
 		height: auto;
 		border-radius:10px;
 		margin: 1.3rem;
 	}
 
 	&-header{
-		width: 40rem;
+		width: 100%;
 		padding-bottom: 1.5rem;
 		//margin-left: -2rem;
 		font-size: 2.4rem;
@@ -1314,13 +1313,13 @@ button:active:focus,button:focus,{
 			
 			&-right{
 				.bold();
-				border: 3px solid @light;
+				//border: 3px solid @light;
 
 			}
 
 			&-user{
 				.bold();
-				border: 3px solid @light;
+				//border: 3px solid @light;
 				.part2-slider{
 					-webkit-appearance: none;
 				    width: 70%;
@@ -1443,9 +1442,63 @@ button:active:focus,button:focus,{
 	}	
 }
 
+.blitz{
+	height: auto;
+	.huge-task{
+		display: block;
+	}
+	.huge-block{
+		display: block;
+	}
+	.huge-answers{
+	}
+
+	&-finish{
+		margin-top: 30rem;
+		width: 100%;
+		margin-bottom: 3rem;
+		.button{
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+
 
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
+
+footer{
+	transition: 0.4s ease;
+	text-align: center;
+	position: fixed; 
+    left: 0; bottom: 0; 
+    padding: 10px; 
+    width: 100%;
+    .footer-block{
+    	font-size: 1.4rem;
+    	display: inline-block;
+    	margin: 0.3rem 3rem;
+    	a{
+    		.bold();
+    		&:hover{
+    			text-decoration: underline !important;
+    		}
+    	}
+    }
+}
+
+.privacy{
+	font-size: 1.5rem;
+	margin: 2rem 0;
+	h4,h2{
+		font-size: 2.3rem;
+	}
+	h5{
+		font-size: 1.8rem;
+		font-weight: 500;
+	}
+}
 
 
 /* Адаптивность */

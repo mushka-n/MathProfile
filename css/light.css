@@ -191,6 +191,9 @@ body {
 .choose-test-recom-green {
   background-color: #63cea4;
 }
+.choose-test-recom-yellow {
+  background-color: #ecaa44;
+}
 .personal-test-block {
   box-shadow: 0 -2px 2px rgba(0, 0, 0, 0.4);
   background-color: #bdbfc9;
@@ -221,6 +224,18 @@ body {
 .personal-test .huge .huge-block .huge-answer:focus ~ label {
   color: #473857;
 }
+.results .huge-answers-right {
+  border: 3px solid #16131a;
+}
+.results .huge-answers-user {
+  border: 3px solid #16131a;
+}
 .inactive {
   background-color: #212121 !important;
+}
+footer {
+  background: #D8DDDA;
+}
+footer .footer-block a {
+  color: #16131a;
 }

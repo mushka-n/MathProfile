@@ -1119,6 +1119,17 @@ if ($user['result'] != ''){
     </div>
 </div>
 
+<footer  style="z-index: 999999999; background-color: #16131A;">
+    <div class="footer-block"  >
+        <a href="" style="color:#EBECE6; ">© 2019-2020  Мушка Никита</a>
+    </div>
+    <div class="footer-block">
+        <a href="../footer/privacy.html"  style="color:#EBECE6">Политика конфиденциальности</a>
+    </div>
+    <div class="footer-block">
+        <a href="../footer/termsofuse.html"  style="color:#EBECE6">Пользовательское соглашение</a>
+    </div>
+</footer>
 
 <script type="text/javascript">
     $('.wrap-task-name').click(function(event)

@@ -189,9 +189,13 @@ body {
 }
 .choose-test-recom {
   border-bottom: 8px solid #24232e;
+  color: #16131a;
 }
 .choose-test-recom-green {
   background-color: #54c99b;
+}
+.choose-test-recom-yellow {
+  background-color: #eba63c;
 }
 .personal-test-block {
   box-shadow: 0 4px 20px -12px rgba(0, 0, 0, 0.8);
@@ -221,8 +225,20 @@ body {
 .personal-test .huge-block .huge-answer:focus ~ label {
   color: #676c7d;
 }
+.results .huge-answers-right {
+  border: 3px solid #ebece6;
+}
+.results .huge-answers-user {
+  border: 3px solid #ebece6;
+}
 .inactive {
   background-color: #212121 !important;
 }
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
+footer {
+  background: #24232e;
+}
+footer .footer-block a {
+  color: #ebece6;
+}

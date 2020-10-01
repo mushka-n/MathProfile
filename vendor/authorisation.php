@@ -12,7 +12,7 @@ if ($_SESSION['user']) {
 <head>
     <meta charset="UTF-8">
     <title>MathProfile</title>
-    
+
     <!-- Favicon -->
     <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
 
@@ -27,7 +27,7 @@ if ($_SESSION['user']) {
 
             <div class="input-block">
                 <label>E-mail</label>
-                <input type="text" name="email" placeholder="Введите свой E-mail">
+                <input type="email" name="email" placeholder="Введите свой E-mail">
             </div>
 
             <div class="input-block">
@@ -52,6 +52,19 @@ if ($_SESSION['user']) {
             ?>
         </form>
     </div>
+
+
+    <footer >
+        <div class="footer-block"  >
+            <a href="" style="color:#212121">© 2019-2020  Мушка Никита</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/privacy.html"  style="color:#212121">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/termsofuse.html"  style="color:#212121">Пользовательское соглашение</a>
+        </div>
+    </footer>
 
 </body>
 </html>

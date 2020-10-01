@@ -14,7 +14,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="../imgs/icons/favicon.png" type="image/x-icon">
-    
+
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
 
 
@@ -30,7 +30,7 @@
             </div>
             <div class="input-block">
                 <label>E-mail</label>
-                <input type="text" name="email" placeholder="Введите свой e-mail">
+                <input type="email" name="email" placeholder="Введите свой e-mail">
             </div>
             <div class="input-block">
                 <label>Пароль</label>
@@ -45,7 +45,7 @@
             
             <button class="button" type="submit">Зарегистрироваться</button>
             <p>
-                У вас уже есть аккаунт? - <a href="../index.php">авторизируйтесь</a>!
+                У вас уже есть аккаунт? - <a href="authorisation.php">авторизируйтесь</a>!
             </p>
             <?php
                 if ($_SESSION['message']) {
@@ -55,6 +55,19 @@
             ?>
         </form>
     </div>
+
+
+   <footer >
+       <div class="footer-block"  >
+           <a href="" style="color:#212121">© 2019-2020  Мушка Никита</a>
+       </div>
+       <div class="footer-block">
+           <a href="../footer/privacy.html"  style="color:#212121">Политика конфиденциальности</a>
+       </div>
+       <div class="footer-block">
+           <a href="../footer/termsofuse.html"  style="color:#212121">Пользовательское соглашение</a>
+       </div>
+   </footer>
     
 
 </body>

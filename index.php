@@ -79,7 +79,7 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
                                 <button class="button" type="submit">теория</button>
                             </form>
                             <form action="tests/choose_test.php">
-                                <button class="button" type="submit" >составить вариант</button>
+                                <button class="button" type="submit">Практика</button>
                             </form>
                             <!-- <form action="">
                                 <button class="button" id="button" type="submit">печатные материалы</button>
@@ -93,72 +93,19 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
 
 
 
-        <div class="zefirka">
-            <div class="a_ya_tebya_bolshe zefirka-block">
-                <img src="../imgs/zephyrka/a_ya_bolshe.gif" alt="">
-            </div>
-            <div class="moya_zefirka zefirka-block">
-                <img src="../imgs/zephyrka/moya_zefirka.gif" alt="">
-            </div>
-            
-        </div>
+        
+
+<footer>
+    <div class="footer-block">
+        <a href="">© 2019-2020  Мушка Никита</a>
     </div>
-
-
-    <script>
-        var phrase1 = 0;
-        var phrase2 = 0;
-
-        document.onkeydown = function(event){
-
-            if (event.code == 'KeyK' && phrase2 == 0) phrase2 = 1;
-            if (event.code == 'Period' && phrase2 == 1) phrase2 = 2; 
-            if (event.code == 'Comma' && phrase2 == 2) phrase2 = 3;
-            if (event.code == 'KeyK' && phrase2 == 3) phrase2 = 4;
-            if (event.code == 'Period' && phrase2 == 4) phrase2 = 5;
-            if (event.code == 'Space' && phrase2 == 5) phrase2 = 6;
-            if (event.code == 'KeyN' && phrase2 == 6) phrase2 = 7;
-            if (event.code == 'KeyT' && phrase2 == 7) phrase2 = 8;
-            if (event.code == 'Comma' && phrase2 == 8) phrase2 = 9;
-            if (event.code == 'KeyZ' && phrase2 == 9) {
-                phrase2 = 0;
-
-                var email = "<?php echo $_SESSION['user']['email']; ?>";
-                if (email == 'liza.savina.01@inbox.ru'){
-                    
-                    $(".a_ya_tebya_bolshe").fadeIn();
-                }
-            }
-
-            if (event.code == 'Comma' && phrase1 == 0) phrase1 = 1;
-            if (event.code == 'KeyJ' && phrase1 == 1) phrase1 = 2; 
-            if (event.code == 'KeyK' && phrase1 == 2) phrase1 = 3;
-            if (event.code == 'KeyM' && phrase1 == 3) phrase1 = 4;
-            if (event.code == 'KeyI' && phrase1 == 4) phrase1 = 5;
-            if (event.code == 'KeyT' && phrase1 == 5) phrase1 = 6;
-            if (event.code == 'Space' && phrase1 == 6) phrase1 = 7;
-            if (event.code == 'Semicolon' && phrase1 == 7) phrase1 = 8;
-            if (event.code == 'KeyB' && phrase1 == 8) phrase1 = 9;
-            if (event.code == 'KeyP' && phrase1 == 9) phrase1 = 10;
-            if (event.code == 'KeyY' && phrase1 == 10) phrase1 = 11;
-            if (event.code == 'KeyB' && phrase1 == 11 ){
-                phrase1 = 0;
-
-                var email = "<?php echo $_SESSION['user']['email']; ?>";
-                if (email == 'liza.savina.01@inbox.ru'){
-                    console.log(email);
-                    $(".moya_zefirka").animate({ width: "toggle"}, 600);
-            }
-        }}
-    </script>
-
-    <script>
-        if ('<?php echo $loginout?>' == 'Войти'){
-            $('#loginout').attr('href','vendor/authorisation.php')
-            $('.for_auth').css("opacity","0.5");
-            $('.if_auth').attr('action','vendor/authorisation.php')
-        }
-    </script>
+    <div class="footer-block">
+        <a href="footer/privacy.html">Политика конфиденциальности</a>
+    </div>
+    <div class="footer-block">
+        <a href="footer/termsofuse.html">Пользовательское соглашение</a>
+    </div>
+</footer>
 
 
 

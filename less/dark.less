@@ -321,8 +321,13 @@ background-color:@dark;
 
 	&-recom{
 		border-bottom: 8px solid @purple-dark;
+		color:@dark;
 		&-green{
 			background-color: @green-func;
+		}
+		&-yellow{
+			background-color: @yellow-func;
+
 		}
 	}
 } 
@@ -374,6 +379,25 @@ background-color:@dark;
 	}
 }
 
+.results{
+
+	.huge{
+
+			
+		&-answers{
+			&-right{
+				border: 3px solid @light;
+
+			}
+
+			&-user{
+				border: 3px solid @light;
+			}
+		}
+
+	}	
+}
+
 .inactive{
 	background-color: @grey !important;
 }
@@ -381,3 +405,13 @@ background-color:@dark;
 
 /* ----------------------------------------------------------------------------------------
 ----------------------------------------------------  */
+
+
+footer{
+    background: @purple-dark;
+    .footer-block{
+    	a{
+    		color: @light;
+    	}
+    }
+}

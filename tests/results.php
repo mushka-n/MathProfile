@@ -261,7 +261,17 @@
 
 
 
-
+    <footer>
+        <div class="footer-block">
+            <a href="">© 2019-2020  Мушка Никита</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/privacy.html">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/termsofuse.html">Пользовательское соглашение</a>
+        </div>
+    </footer>
 
 <?php 
 	$diffs = json_encode($diffs,JSON_NUMERIC_CHECK);
@@ -276,7 +286,6 @@
 
 <script>
 
-    $(document).ready(function(){
 
 	 $('.part2-slider').click(function (event){
 	 	let task = parseInt($(this).attr("name").slice(-2));
@@ -381,9 +390,9 @@
  	let part1val = '';
  	for (let i =0; i<12; i++){
  		
- 		if (user_answers[i] == answers[i] || user_answers[i]!=''){
+ 		if (user_answers[i] == answers[i] && user_answers[i]!=''){
  			$('#ptb'+(i+1)).css('background-color',"#54C99B");
- 			$('#ha'+(i+1)).children('.huge-answers-user').css('background-color',"#54C99B");
+ 			$('#ha'+(i+1)).children('.huge-answers-user').css('border-color',"#54C99B");
  			part1val += '1';
  		} else {
  			$('#ptb'+(i+1)).css('background-color',"#EB4F3C");
@@ -428,8 +437,6 @@
         
     }); 
 
-
-});
 
 </script>
 

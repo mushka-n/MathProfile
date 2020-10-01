@@ -108,7 +108,17 @@
     	</div>
     </div>
 
-
+    <footer>
+        <div class="footer-block">
+            <a href="">© 2019-2020  Мушка Никита</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/privacy.html">Политика конфиденциальности</a>
+        </div>
+        <div class="footer-block">
+            <a href="../footer/termsofuse.html">Пользовательское соглашение</a>
+        </div>
+    </footer>
     
 </body>
 </html>
