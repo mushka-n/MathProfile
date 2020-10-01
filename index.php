@@ -95,7 +95,7 @@ if(!isset($_SESSION["theme"])) $_SESSION["theme"] = "light";
 
         
 
-<footer>
+<footer >
     <div class="footer-block">
         <a href="">© 2019-2020  Мушка Никита</a>
     </div>

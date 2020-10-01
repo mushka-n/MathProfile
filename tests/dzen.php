@@ -8,17 +8,8 @@
     require_once 'answers.php'; 
 
     if (!$_SESSION['user']) {
-        header('Location: ../index.php');   
     } else {
         $loginout = 'Выход';
-        $id=$_SESSION['user']['id'];
-    }
-
-
-    if ($_SESSION['test']["done"] == 1){
-       header('Location: ../index.php');
-    } else {
-        $_SESSION['test'] = ["done" => 0];
     }
 
 
